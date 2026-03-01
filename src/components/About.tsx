@@ -43,7 +43,7 @@ export const About = () => {
         className="max-w-7xl mx-auto"
       >
         <motion.div variants={itemVariants} className="mb-16">
-          <h2 className="font-display text-6xl md:text-8xl lg:text-9xl uppercase text-neon-yellow mb-4 leading-none">
+          <h2 className="font-headingWide text-6xl md:text-8xl lg:text-9xl uppercase text-neon-yellow mb-4 leading-none">
             THIS IS
             <br />
             <span className="text-white">XTASY</span>
@@ -74,7 +74,7 @@ export const About = () => {
             className="lg:col-span-5 space-y-6"
           >
             <div className="border-4 border-white p-6 md:p-8 rotate-1">
-              <h3 className="font-display text-3xl md:text-4xl text-neon-yellow uppercase mb-4">
+              <h3 className="font-heading text-3xl md:text-4xl text-neon-yellow uppercase mb-4">
                 5000+
               </h3>
               <p className="text-white text-sm md:text-base uppercase tracking-wider">
@@ -83,7 +83,7 @@ export const About = () => {
             </div>
 
             <div className="border-4 border-neon-yellow p-6 md:p-8 -rotate-1 bg-white">
-              <h3 className="font-display text-3xl md:text-4xl text-black uppercase mb-4">
+              <h3 className="font-heading text-3xl md:text-4xl text-black uppercase mb-4">
                 50+
               </h3>
               <p className="text-black text-sm md:text-base uppercase tracking-wider font-bold">
@@ -103,7 +103,7 @@ export const About = () => {
               className="border-2 border-hot-pink p-8 text-center hover:bg-hot-pink transition-all duration-300 group"
               style={{ transform: `rotate(${index % 2 === 0 ? '1deg' : '-1deg'})` }}
             >
-              <h4 className="font-display text-3xl md:text-4xl text-white group-hover:text-black transition-colors">
+              <h4 className="font-heading text-3xl md:text-4xl text-white group-hover:text-black transition-colors">
                 {word}
               </h4>
             </div>

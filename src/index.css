@@ -2,6 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ================= ARRAY ================= */
+
+@font-face {
+  font-family: "Array";
+  src: url("./fonts/Array-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Array";
+  src: url("./fonts/Array-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Array Wide";
+  src: url("./fonts/Array-BoldWide.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ================= SPACE GROTESK ================= */
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("./fonts/SpaceGrotesk-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("./fonts/SpaceGrotesk-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("./fonts/SpaceGrotesk-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   * {
     cursor: none !important;
@@ -12,7 +64,7 @@
   }
 
   body {
-    @apply bg-black;
+    @apply bg-black font-body;
     overflow-x: hidden;
   }
 

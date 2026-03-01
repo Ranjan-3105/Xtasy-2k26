@@ -36,7 +36,7 @@ export const Register = () => {
         </motion.div>
 
         <motion.h2
-          className="font-display text-6xl md:text-8xl lg:text-[12rem] uppercase leading-none text-black mb-8"
+          className="font-headingWide text-6xl md:text-8xl lg:text-[12rem] uppercase leading-none text-black mb-8"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -61,7 +61,7 @@ export const Register = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <motion.button
-            className="bg-black text-neon-yellow font-display text-2xl md:text-4xl uppercase px-12 md:px-20 py-6 md:py-8 border-4 border-black relative overflow-hidden group"
+            className="bg-black text-neon-yellow font-heading text-2xl md:text-4xl uppercase px-12 md:px-20 py-6 md:py-8 border-4 border-black relative overflow-hidden group"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => {
@@ -118,17 +118,17 @@ export const Register = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <div className="border-4 border-black p-6 bg-white">
-            <h3 className="font-display text-4xl text-black mb-2">FREE</h3>
+            <h3 className="font-heading text-4xl text-black mb-2">FREE</h3>
             <p className="text-black font-bold uppercase text-sm">ENTRY FOR ALL</p>
           </div>
 
           <div className="border-4 border-black p-6 bg-hot-pink">
-            <h3 className="font-display text-4xl text-white mb-2">₹5L+</h3>
+            <h3 className="font-heading text-4xl text-white mb-2">₹5L+</h3>
             <p className="text-white font-bold uppercase text-sm">PRIZE POOL</p>
           </div>
 
           <div className="border-4 border-black p-6 bg-black">
-            <h3 className="font-display text-4xl text-neon-yellow mb-2">3</h3>
+            <h3 className="font-heading text-4xl text-neon-yellow mb-2">3</h3>
             <p className="text-neon-yellow font-bold uppercase text-sm">DAYS OF MADNESS</p>
           </div>
         </motion.div>

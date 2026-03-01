@@ -76,7 +76,7 @@ export const Events = () => {
           transition={{ duration: 0.8 }}
           className="mb-20"
         >
-          <h2 className="font-display text-6xl md:text-8xl lg:text-[10rem] uppercase leading-none">
+          <h2 className="font-headingWide text-6xl md:text-8xl lg:text-[10rem] uppercase leading-none">
             <span className="text-white">THE</span>
             <br />
             <span className="text-hot-pink">EVENTS</span>
@@ -183,7 +183,7 @@ const EventCard = ({ event }: EventCardProps) => {
         </motion.div>
 
         <div className="relative z-10">
-          <h3 className={`font-display text-3xl md:text-4xl ${getTextColor()} uppercase mb-4 leading-tight`}>
+          <h3 className={`font-heading text-3xl md:text-4xl ${getTextColor()} uppercase mb-4 leading-tight`}>
             {event.title}
           </h3>
 

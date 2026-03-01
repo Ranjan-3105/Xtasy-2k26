@@ -2,15 +2,24 @@ import { motion } from 'framer-motion';
 import { useScrollDepth } from '../hooks/useScrollDepth';
 import { Camera } from 'lucide-react';
 
+import img1 from '../assets/AMUZA 2 1.png';
+import img2 from '../assets/AcrossTheSpiderVerse 1.png';
+import img3 from '../assets/INKVENT 2 1.png';
+import img4 from '../assets/PARTHO_3 1.png';
+import img5 from '../assets/PF 3 1.png';
+import img6 from '../assets/PF 4.png';
+import img7 from '../assets/PHOTOFACTORY 1.png';
+import img8 from '../assets/QUIZ 01 1.png';
+
 const galleryImages = [
-  { id: 1, height: 'h-64', overlay: 'neon-yellow' },
-  { id: 2, height: 'h-80', overlay: 'hot-pink' },
-  { id: 3, height: 'h-72', overlay: 'neon-yellow' },
-  { id: 4, height: 'h-64', overlay: 'hot-pink' },
-  { id: 5, height: 'h-96', overlay: 'neon-yellow' },
-  { id: 6, height: 'h-72', overlay: 'hot-pink' },
-  { id: 7, height: 'h-80', overlay: 'neon-yellow' },
-  { id: 8, height: 'h-64', overlay: 'hot-pink' },
+  { id: 1, src: img1, height: 'h-64', overlay: 'neon-yellow' },
+  { id: 2, src: img2, height: 'h-80', overlay: 'hot-pink' },
+  { id: 3, src: img3, height: 'h-72', overlay: 'neon-yellow' },
+  { id: 4, src: img4, height: 'h-64', overlay: 'hot-pink' },
+  { id: 5, src: img5, height: 'h-96', overlay: 'neon-yellow' },
+  { id: 6, src: img6, height: 'h-72', overlay: 'hot-pink' },
+  { id: 7, src: img7, height: 'h-80', overlay: 'neon-yellow' },
+  { id: 8, src: img8, height: 'h-64', overlay: 'hot-pink' },
 ];
 
 export const Gallery = () => {
@@ -30,7 +39,7 @@ export const Gallery = () => {
         >
           <div className="flex items-center gap-6 mb-6">
             <Camera className="w-12 h-12 md:w-16 md:h-16 text-hot-pink" />
-            <h2 className="font-display text-6xl md:text-8xl lg:text-9xl uppercase text-white leading-none">
+            <h2 className="font-headingWide text-6xl md:text-8xl lg:text-9xl uppercase text-white leading-none">
               GALLERY
             </h2>
           </div>
@@ -68,18 +77,11 @@ const GalleryItem = ({ image, index }: GalleryItemProps) => {
       className="group relative overflow-hidden cursor-pointer"
     >
       <motion.div
-        className={`${image.height} bg-gradient-to-br from-gray-800 to-gray-900 relative`}
+        className={`${image.height} bg-gray-900 relative`}
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.3 }}
       >
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center">
-            <Camera className="w-12 h-12 text-gray-700 mx-auto mb-4" />
-            <p className="text-gray-600 text-sm uppercase tracking-wider">
-              XTASY {2025 - (index % 3)}
-            </p>
-          </div>
-        </div>
+        <img src={image.src} alt={`Gallery ${image.id}`} className="absolute inset-0 w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500" />
 
         <motion.div
           className={`absolute inset-0 ${

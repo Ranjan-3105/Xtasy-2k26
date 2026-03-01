@@ -8,8 +8,9 @@ export default {
         'hot-pink': '#E6007E',
       },
       fontFamily: {
-        'display': ['Impact', 'Arial Black', 'sans-serif'],
-        'sans': ['Arial', 'Helvetica', 'sans-serif'],
+        heading: ["Array", "sans-serif"],
+        headingWide: ["Array Wide", "sans-serif"],
+        body: ["Space Grotesk", "sans-serif"],
       },
       animation: {
         'flicker': 'flicker 2s infinite',

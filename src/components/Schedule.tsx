@@ -63,7 +63,7 @@ export const Schedule = () => {
           <div className="flex items-center justify-center mb-6">
             <Calendar className="w-16 h-16 text-neon-yellow" />
           </div>
-          <h2 className="font-display text-6xl md:text-8xl lg:text-9xl uppercase text-white leading-none mb-4">
+          <h2 className="font-headingWide text-6xl md:text-8xl lg:text-9xl uppercase text-white leading-none mb-4">
             SCHEDULE
           </h2>
           <div className="w-32 h-2 bg-hot-pink mx-auto" />
@@ -120,7 +120,7 @@ const DaySchedule = ({ daySchedule, index }: DayScheduleProps) => {
           <div className={`inline-block border-4 ${
             index % 2 === 0 ? 'border-neon-yellow' : 'border-hot-pink'
           } p-6 mb-6 bg-black`}>
-            <h3 className="font-display text-4xl md:text-5xl text-white uppercase mb-2">
+            <h3 className="font-heading text-4xl md:text-5xl text-white uppercase mb-2">
               {daySchedule.day}
             </h3>
             <p className={`text-xl font-bold ${

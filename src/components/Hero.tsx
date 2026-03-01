@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { Zap } from 'lucide-react';
+import logo from '../assets/Xtasy_Logo.png';
 
 export const Hero = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -28,25 +29,17 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="relative"
+          className="relative flex flex-col items-center justify-center"
         >
-          <motion.h1
-            className="font-display text-[12vw] md:text-[15vw] lg:text-[18vw] leading-none uppercase text-white mb-4 select-none"
-            animate={{
-              textShadow: [
-                '0 0 20px #FEEA07',
-                '0 0 40px #FEEA07',
-                '0 0 20px #FEEA07',
-              ],
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              repeatType: 'reverse',
-            }}
-          >
-            XTASY
-          </motion.h1>
+          <motion.img
+            src={logo}
+            alt="Xtasy Logo"
+            className="w-32 h-auto md:w-56 lg:w-64 mb-4 object-contain"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1, type: "spring", bounce: 0.5, delay: 0.4 }}
+          />
+
 
           <motion.div
             className="absolute -top-8 -right-4 md:-top-12 md:-right-8"
