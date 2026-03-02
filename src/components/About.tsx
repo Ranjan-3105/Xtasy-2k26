@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useScrollDepth } from '../hooks/useScrollDepth';
+import eye from '../assets/eye.png';
 
 export const About = () => {
   const { ref, isInView } = useScrollDepth({ threshold: 0.3 });
@@ -36,6 +37,25 @@ export const About = () => {
         transformStyle: 'preserve-3d',
       }}
     >
+      <div className="absolute top-20 right-5 md:right-10 w-24 h-24 md:w-48 md:h-48 opacity-30 md:opacity-20 pointer-events-none z-0">
+        <motion.img
+          src={eye}
+          alt=""
+          className="w-full h-full object-contain"
+          animate={{ rotate: 360 }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        />
+      </div>
+      <div className="absolute bottom-20 left-5 md:left-10 w-20 h-20 md:w-32 md:h-32 opacity-40 md:opacity-30 pointer-events-none z-0">
+        <motion.img
+          src={eye}
+          alt=""
+          className="w-full h-full object-contain grayscale"
+          animate={{ scale: [1, 1.2, 1], y: [0, 15, 0] }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </div>
+
       <motion.div
         variants={containerVariants}
         initial="hidden"

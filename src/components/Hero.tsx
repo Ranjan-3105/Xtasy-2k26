@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { Zap } from 'lucide-react';
 import logo from '../assets/Xtasy_Logo.png';
+import eye from '../assets/eye.png';
 
 export const Hero = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -23,6 +24,21 @@ export const Hero = () => {
 
       <div className="absolute top-0 left-0 w-32 h-32 bg-hot-pink opacity-20 blur-[100px]" />
       <div className="absolute bottom-0 right-0 w-32 h-32 bg-neon-yellow opacity-20 blur-[100px]" />
+
+      <motion.img
+        src={eye}
+        alt=""
+        className="absolute top-[10%] left-[5%] md:top-[20%] md:left-[10%] w-16 h-16 md:w-24 md:h-24 object-contain opacity-50 md:opacity-60 pointer-events-none z-0"
+        animate={{ y: [0, -20, 0], rotate: [0, 10, -10, 0] }}
+        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.img
+        src={eye}
+        alt=""
+        className="absolute bottom-[15%] right-[5%] md:bottom-[20%] md:right-[10%] w-24 h-24 md:w-32 md:h-32 object-contain opacity-30 md:opacity-40 blur-[1px] pointer-events-none z-0"
+        animate={{ y: [0, 30, 0], rotate: [0, -15, 15, 0] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+      />
 
       <div className="relative z-10 text-center px-4">
         <motion.div

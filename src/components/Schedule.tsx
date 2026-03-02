@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useScrollDepth } from '../hooks/useScrollDepth';
 import { Calendar } from 'lucide-react';
+import eye from '../assets/eye.png';
 
 const scheduleData = [
   {
@@ -51,9 +52,28 @@ export const Schedule = () => {
   return (
     <section
       ref={ref}
-      className="min-h-screen bg-black py-24 px-4 md:px-8 lg:px-16 relative"
+      className="min-h-screen bg-black py-24 px-4 md:px-8 lg:px-16 relative overflow-hidden"
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="absolute top-1/3 left-0 w-24 h-24 md:w-48 md:h-48 opacity-30 md:opacity-20 pointer-events-none z-0">
+        <motion.img
+          src={eye}
+          alt=""
+          className="w-full h-full object-contain grayscale"
+          animate={{ scale: [1, 1.2, 1], rotate: [0, 90, 0] }}
+          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+        />
+      </div>
+      <div className="absolute bottom-1/4 right-0 w-32 h-32 md:w-64 md:h-64 opacity-20 md:opacity-10 pointer-events-none z-0 -scale-x-100">
+        <motion.img
+          src={eye}
+          alt=""
+          className="w-full h-full object-contain grayscale"
+          animate={{ y: [0, -30, 0] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </div>
+
+      <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
