@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useScrollDepth } from '../hooks/useScrollDepth';
 import { Music, Gauge, Code, Gamepad2, Sparkles, BookOpen } from 'lucide-react';
 import eye from '../assets/eye.png';
+import guitar from '../assets/guitarElem1.png';
 
 const events = [
   {
@@ -70,16 +71,16 @@ export const Events = () => {
         transformStyle: 'preserve-3d',
       }}
     >
-      <div className="absolute top-20 md:top-40 left-2 md:left-5 w-20 h-20 md:w-28 md:h-28 opacity-40 pointer-events-none z-0">
+      <div className="absolute top-20 md:top-40 right-2 md:right-5 w-20 h-20 md:w-32 md:h-32 opacity-40 pointer-events-none z-0">
         <motion.img
-           src={eye}
+           src={guitar}
            alt=""
            className="w-full h-full object-contain mix-blend-screen"
            animate={{ y: [0, 30, 0], x: [0, 15, 0] }}
            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
       </div>
-      <div className="absolute bottom-20 md:bottom-40 right-2 md:right-5 w-24 h-24 md:w-40 md:h-40 opacity-20 pointer-events-none z-0">
+      <div className="absolute bottom-20 md:bottom-40 left-2 md:left-5 w-24 h-24 md:w-40 md:h-40 opacity-20 pointer-events-none z-0">
         <motion.img
            src={eye}
            alt=""

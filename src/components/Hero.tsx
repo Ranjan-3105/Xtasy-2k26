@@ -1,8 +1,11 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { Zap } from 'lucide-react';
-import logo from '../assets/Xtasy_Logo.png';
+import Tlogo from '../assets/XTASY_TRANSPARENT_RED.png'
 import eye from '../assets/eye.png';
+import starSkull from '../assets/starSkull.png';
+import heroVideo from '../assets/XTC bnw Backdrop.mp4';
+import { Countdown } from './Countdown';
 
 export const Hero = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -20,7 +23,17 @@ export const Hero = () => {
       style={{ scale, opacity }}
       className="h-screen flex items-center justify-center relative overflow-hidden"
     >
-      <div className="absolute inset-0 bg-black" />
+      <div className="absolute inset-0 bg-black">
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+          className="w-full h-full object-cover opacity-40 md:opacity-50 pointer-events-none"
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+      </div>
 
       <div className="absolute top-0 left-0 w-32 h-32 bg-hot-pink opacity-20 blur-[100px]" />
       <div className="absolute bottom-0 right-0 w-32 h-32 bg-neon-yellow opacity-20 blur-[100px]" />
@@ -33,7 +46,7 @@ export const Hero = () => {
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.img
-        src={eye}
+        src={starSkull}
         alt=""
         className="absolute bottom-[15%] right-[5%] md:bottom-[20%] md:right-[10%] w-24 h-24 md:w-32 md:h-32 object-contain opacity-30 md:opacity-40 blur-[1px] pointer-events-none z-0"
         animate={{ y: [0, 30, 0], rotate: [0, -15, 15, 0] }}
@@ -48,7 +61,7 @@ export const Hero = () => {
           className="relative flex flex-col items-center justify-center"
         >
           <motion.img
-            src={logo}
+            src={Tlogo}
             alt="Xtasy Logo"
             className="w-32 h-auto md:w-56 lg:w-64 mb-4 object-contain"
             initial={{ scale: 0 }}
@@ -82,28 +95,21 @@ export const Hero = () => {
           Annual Cultural Fest 2026
         </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.8 }}
-          className="border-2 border-neon-yellow px-8 py-3 inline-block"
-        >
-          <p className="text-white font-bold text-sm md:text-base tracking-wider">
-            MARCH 15-17, 2026
-          </p>
-        </motion.div>
+        <Countdown />
       </div>
 
-      <motion.div
-        className="absolute bottom-12 left-1/2 transform -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <Zap className="w-8 h-8 text-hot-pink fill-hot-pink rotate-180" />
-        <p className="text-white text-xs tracking-widest mt-2">SCROLL</p>
-      </motion.div>
+      <a href="#about" className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-50 cursor-pointer">
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="flex flex-col items-center"
+        >
+          <Zap className="w-8 h-8 text-hot-pink fill-hot-pink rotate-180" />
+          <p className="text-white text-xs tracking-widest mt-2">SCROLL</p>
+        </motion.div>
+      </a>
 
-      <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-transparent via-transparent to-black opacity-30"
+      <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-transparent via-transparent to-black opacity-30 pointer-events-none"
            style={{
              clipPath: 'polygon(0 0, 100% 0, 100% 20%, 95% 25%, 90% 20%, 85% 25%, 80% 20%, 75% 25%, 70% 20%, 65% 25%, 60% 20%, 55% 25%, 50% 20%, 45% 25%, 40% 20%, 35% 25%, 30% 20%, 25% 25%, 20% 20%, 15% 25%, 10% 20%, 5% 25%, 0 20%)'
            }}

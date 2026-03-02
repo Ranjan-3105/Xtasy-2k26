@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import { useScrollDepth } from '../hooks/useScrollDepth';
 import { Zap, ArrowRight } from 'lucide-react';
-import eye from '../assets/eye.png';
+import starSkull from '../assets/starSkull.png';
+import guitar2 from '../assets/guitarelem2.png';
 
 export const Register = () => {
   const { ref, isInView } = useScrollDepth({ threshold: 0.3 });
@@ -18,7 +19,7 @@ export const Register = () => {
 
       <div className="absolute top-[8%] right-[5%] w-24 h-24 md:top-[15%] md:w-48 md:h-48 opacity-20 md:opacity-30 pointer-events-none z-0">
         <motion.img
-          src={eye}
+          src={starSkull}
           alt=""
           className="w-full h-full object-contain md:mix-blend-multiply"
           animate={{ scale: [1, 1.1, 1], rotate: [0, -10, 10, 0] }}
@@ -27,7 +28,7 @@ export const Register = () => {
       </div>
       <div className="absolute bottom-[5%] left-[5%] w-32 h-32 md:bottom-[10%] md:w-56 md:h-56 opacity-15 md:opacity-20 pointer-events-none z-0">
         <motion.img
-          src={eye}
+          src={guitar2}
           alt=""
           className="w-full h-full object-contain md:mix-blend-multiply"
           animate={{ y: [0, -20, 0], x: [0, 20, 0] }}

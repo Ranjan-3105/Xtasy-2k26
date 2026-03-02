@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import { useScrollDepth } from '../hooks/useScrollDepth';
 import { Calendar } from 'lucide-react';
-import eye from '../assets/eye.png';
+import eye2 from '../assets/eye2.png';
+import guitar1 from '../assets/guitarElem1.png';
 
 const scheduleData = [
   {
@@ -56,7 +57,7 @@ export const Schedule = () => {
     >
       <div className="absolute top-1/3 left-0 w-24 h-24 md:w-48 md:h-48 opacity-30 md:opacity-20 pointer-events-none z-0">
         <motion.img
-          src={eye}
+          src={eye2}
           alt=""
           className="w-full h-full object-contain grayscale"
           animate={{ scale: [1, 1.2, 1], rotate: [0, 90, 0] }}
@@ -65,7 +66,7 @@ export const Schedule = () => {
       </div>
       <div className="absolute bottom-1/4 right-0 w-32 h-32 md:w-64 md:h-64 opacity-20 md:opacity-10 pointer-events-none z-0 -scale-x-100">
         <motion.img
-          src={eye}
+          src={guitar1}
           alt=""
           className="w-full h-full object-contain grayscale"
           animate={{ y: [0, -30, 0] }}

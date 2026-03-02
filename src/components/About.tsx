@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useScrollDepth } from '../hooks/useScrollDepth';
-import eye from '../assets/eye.png';
+import eye2 from '../assets/eye2.png';
+import guitar2 from '../assets/guitarelem2.png';
 
 export const About = () => {
   const { ref, isInView } = useScrollDepth({ threshold: 0.3 });
@@ -39,7 +40,7 @@ export const About = () => {
     >
       <div className="absolute top-20 right-5 md:right-10 w-24 h-24 md:w-48 md:h-48 opacity-30 md:opacity-20 pointer-events-none z-0">
         <motion.img
-          src={eye}
+          src={guitar2}
           alt=""
           className="w-full h-full object-contain"
           animate={{ rotate: 360 }}
@@ -48,7 +49,7 @@ export const About = () => {
       </div>
       <div className="absolute bottom-20 left-5 md:left-10 w-20 h-20 md:w-32 md:h-32 opacity-40 md:opacity-30 pointer-events-none z-0">
         <motion.img
-          src={eye}
+          src={eye2}
           alt=""
           className="w-full h-full object-contain grayscale"
           animate={{ scale: [1, 1.2, 1], y: [0, 15, 0] }}

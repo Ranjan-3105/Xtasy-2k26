@@ -19,7 +19,7 @@ import { ContactPage } from './components/ContactPage';
 
 function Home() {
   return (
-    <div className="bg-black overflow-x-hidden pt-20">
+    <div className="bg-black overflow-x-hidden">
       <Navbar />
       <ScrollProgress />
 
