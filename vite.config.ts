@@ -11,4 +11,17 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+          'vendor-motion': ['framer-motion'],
+          'vendor-utils': ['gl-matrix', 'lucide-react']
+        }
+      }
+    },
+    // Generate sub-500kb chunks safely without warnings
+    chunkSizeWarningLimit: 600,
+  }
 });

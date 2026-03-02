@@ -17,7 +17,7 @@ export const Register = () => {
         <div className="absolute bottom-10 right-10 w-64 h-64 bg-hot-pink opacity-30 blur-[100px] rounded-full" />
       </div>
 
-      <div className="absolute top-[8%] right-[5%] w-24 h-24 md:top-[15%] md:w-48 md:h-48 opacity-20 md:opacity-30 pointer-events-none z-0">
+      <div className="hidden md:block absolute top-[8%] right-[5%] w-24 h-24 md:top-[15%] md:w-48 md:h-48 opacity-20 md:opacity-30 pointer-events-none z-0">
         <motion.img
           src={starSkull}
           alt=""
@@ -26,7 +26,7 @@ export const Register = () => {
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         />
       </div>
-      <div className="absolute bottom-[5%] left-[5%] w-32 h-32 md:bottom-[10%] md:w-56 md:h-56 opacity-15 md:opacity-20 pointer-events-none z-0">
+      <div className="hidden md:block absolute bottom-[5%] left-[5%] w-32 h-32 md:bottom-[10%] md:w-56 md:h-56 opacity-15 md:opacity-20 pointer-events-none z-0">
         <motion.img
           src={guitar2}
           alt=""
@@ -89,24 +89,10 @@ export const Register = () => {
               window.open('https://forms.google.com', '_blank');
             }}
           >
-            <motion.span
-              className="relative z-10 flex items-center gap-4"
-              animate={{
-                textShadow: [
-                  '0 0 10px #FEEA07',
-                  '0 0 20px #FEEA07',
-                  '0 0 10px #FEEA07',
-                ],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                repeatType: 'reverse',
-              }}
-            >
+            <span className="relative z-10 flex items-center gap-4 text-neon-yellow">
               REGISTER NOW
               <ArrowRight className="w-8 h-8" />
-            </motion.span>
+            </span>
 
             <motion.div
               className="absolute inset-0 bg-hot-pink"
@@ -133,22 +119,22 @@ export const Register = () => {
         </motion.div>
 
         <motion.div
-          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
+          className="mt-12 md:mt-16 flex flex-col md:grid md:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto px-4 md:px-0"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <div className="border-4 border-black p-6 bg-white">
+          <div className="border-4 border-black p-6 bg-white will-change-transform transform hover:scale-105 transition-transform duration-300">
             <h3 className="font-heading text-4xl text-black mb-2">FREE</h3>
             <p className="text-black font-bold uppercase text-sm">ENTRY FOR ALL</p>
           </div>
 
-          <div className="border-4 border-black p-6 bg-hot-pink">
+          <div className="border-4 border-black p-6 bg-hot-pink will-change-transform transform hover:scale-105 transition-transform duration-300">
             <h3 className="font-heading text-4xl text-white mb-2">₹5L+</h3>
             <p className="text-white font-bold uppercase text-sm">PRIZE POOL</p>
           </div>
 
-          <div className="border-4 border-black p-6 bg-black">
+          <div className="border-4 border-black p-6 bg-black will-change-transform transform hover:scale-105 transition-transform duration-300">
             <h3 className="font-heading text-4xl text-neon-yellow mb-2">3</h3>
             <p className="text-neon-yellow font-bold uppercase text-sm">DAYS OF MADNESS</p>
           </div>

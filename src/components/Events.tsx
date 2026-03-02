@@ -1,52 +1,24 @@
 import { motion } from 'framer-motion';
 import { useScrollDepth } from '../hooks/useScrollDepth';
-import { Music, Gauge, Code, Gamepad2, Sparkles, BookOpen } from 'lucide-react';
+import { Music, Zap, Sparkles, Users, BookOpen, Monitor, MessageSquare, Star } from 'lucide-react';
 import eye from '../assets/eye.png';
 import guitar from '../assets/guitarElem1.png';
 
 const events = [
-  {
-    title: 'MUSIC NIGHT',
-    icon: Music,
-    color: 'neon-yellow',
-    description: 'Battle of the bands. Sonic warfare. Pure energy.',
-    angle: 2,
-  },
-  {
-    title: 'DANCE BATTLE',
-    icon: Gauge,
-    color: 'hot-pink',
-    description: 'Body language revolution. Movement meets madness.',
-    angle: -1,
-  },
-  {
-    title: 'CODING HACKATHON',
-    icon: Code,
-    color: 'white',
-    description: '36 hours. Infinite possibilities. Digital dreams.',
-    angle: 1,
-  },
-  {
-    title: 'GAMING ARENA',
-    icon: Gamepad2,
-    color: 'neon-yellow',
-    description: 'E-sports championships. Virtual domination.',
-    angle: -2,
-  },
-  {
-    title: 'FASHION SHOW',
-    icon: Sparkles,
-    color: 'hot-pink',
-    description: 'Runway rebellion. Style meets substance.',
-    angle: 1,
-  },
-  {
-    title: 'LITERARY ARENA',
-    icon: BookOpen,
-    color: 'white',
-    description: 'Spoken word. Slam poetry. Word warriors.',
-    angle: -1,
-  },
+  { title: 'BURNOUT', icon: Zap, color: 'neon-yellow', description: 'Dance Battle', rotationClass: 'md:rotate-2' },
+  { title: 'SINFONIETTA', icon: Music, color: 'hot-pink', description: 'Solo Singing', rotationClass: 'md:-rotate-1' },
+  { title: 'RELAY ART CHALLENGE', icon: Star, color: 'white', description: 'Art Challenge', rotationClass: 'md:rotate-1' },
+  { title: 'CHAURAHA', icon: Users, color: 'neon-yellow', description: 'Nukkad', rotationClass: 'md:-rotate-2' },
+  { title: 'NRUTYA NAIVEDYA', icon: Sparkles, color: 'hot-pink', description: 'Classical Dance', rotationClass: 'md:rotate-1' },
+  { title: 'QUESTIONABLE', icon: MessageSquare, color: 'white', description: 'The NSFW Quiz', rotationClass: 'md:-rotate-1' },
+  { title: 'GUESSWORK IN PROGRESS', icon: BookOpen, color: 'neon-yellow', description: 'Themed Quiz', rotationClass: 'md:rotate-2' },
+  { title: 'DIGICLASH', icon: Monitor, color: 'hot-pink', description: 'Digital Art', rotationClass: 'md:-rotate-1' },
+  { title: 'SKETCHCLASH', icon: Star, color: 'white', description: 'Sketching', rotationClass: 'md:rotate-1' },
+  { title: 'RANGAMANCH', icon: Users, color: 'neon-yellow', description: 'Drama/Play', rotationClass: 'md:-rotate-2' },
+  { title: 'UNISON', icon: Zap, color: 'hot-pink', description: 'Group Dance', rotationClass: 'md:rotate-1' },
+  { title: 'MDMA', icon: MessageSquare, color: 'white', description: 'The Xtasy Quiz', rotationClass: 'md:-rotate-1' },
+  { title: 'NEWSPRINT', icon: BookOpen, color: 'neon-yellow', description: 'Journalism/Writing', rotationClass: 'md:rotate-2' },
+  { title: 'BATTLE OF BANDS', icon: Music, color: 'hot-pink', description: 'Live Band Competition', rotationClass: 'md:-rotate-1' },
 ];
 
 export const Events = () => {
@@ -71,7 +43,7 @@ export const Events = () => {
         transformStyle: 'preserve-3d',
       }}
     >
-      <div className="absolute top-20 md:top-40 right-2 md:right-5 w-20 h-20 md:w-32 md:h-32 opacity-40 pointer-events-none z-0">
+      <div className="hidden md:block absolute top-20 md:top-40 right-2 md:right-5 w-20 h-20 md:w-32 md:h-32 opacity-40 pointer-events-none z-0">
         <motion.img
            src={guitar}
            alt=""
@@ -80,7 +52,7 @@ export const Events = () => {
            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
       </div>
-      <div className="absolute bottom-20 md:bottom-40 left-2 md:left-5 w-24 h-24 md:w-40 md:h-40 opacity-20 pointer-events-none z-0">
+      <div className="hidden md:block absolute bottom-20 md:bottom-40 left-2 md:left-5 w-24 h-24 md:w-40 md:h-40 opacity-20 pointer-events-none z-0">
         <motion.img
            src={eye}
            alt=""
@@ -109,7 +81,7 @@ export const Events = () => {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 pb-8 md:pb-0"
         >
           {events.map((event, index) => (
             <EventCard key={event.title} event={event} index={index} />
@@ -117,8 +89,8 @@ export const Events = () => {
         </motion.div>
       </div>
 
-      <div className="absolute top-20 right-10 w-64 h-64 bg-hot-pink opacity-10 blur-[120px] rounded-full" />
-      <div className="absolute bottom-20 left-10 w-64 h-64 bg-neon-yellow opacity-10 blur-[120px] rounded-full" />
+      <div className="hidden md:block absolute top-20 right-10 w-64 h-64 bg-hot-pink opacity-10 blur-[120px] rounded-full" />
+      <div className="hidden md:block absolute bottom-20 left-10 w-64 h-64 bg-neon-yellow opacity-10 blur-[120px] rounded-full" />
     </section>
   );
 };
@@ -135,18 +107,15 @@ const EventCard = ({ event }: EventCardProps) => {
   const itemVariants = {
     hidden: {
       opacity: 0,
-      y: 100,
-      scale: 0.9,
-      rotateX: -15,
+      y: 30,
+      scale: 0.95,
     },
     visible: {
       opacity: 1,
       y: 0,
       scale: 1,
-      rotateX: 0,
       transition: {
-        duration: 0.8,
-        ease: [0.6, 0.05, 0.01, 0.9] as [number, number, number, number],
+        duration: 0.5,
       },
     },
   };
@@ -177,13 +146,10 @@ const EventCard = ({ event }: EventCardProps) => {
     <motion.div
       ref={ref}
       variants={itemVariants}
-      className="group relative w-full will-change-transform"
-      style={{
-        transform: `rotate(${event.angle}deg)`,
-      }}
+      className={`group relative w-full will-change-transform ${event.rotationClass}`}
     >
       <motion.div
-        className={`border-2 md:border-4 ${getBorderColor()} bg-black/95 p-6 md:p-8 relative overflow-hidden cursor-pointer h-full backdrop-blur-sm shadow-[0_0_15px_rgba(255,255,255,0.05)] hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-shadow duration-300 md:shadow-none`}
+        className={`border-2 md:border-4 ${getBorderColor()} bg-[#080808] p-6 md:p-8 relative overflow-hidden cursor-pointer h-full md:backdrop-blur-sm transition-shadow duration-300 md:shadow-none hover:shadow-[0_0_10px_rgba(255,255,255,0.05)]`}
         whileHover={{
           scale: 1.05,
           rotate: 0,

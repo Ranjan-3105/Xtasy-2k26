@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
-import { Zap } from 'lucide-react';
+import { useRef, useEffect, useState } from 'react';
+import { Zap, Play, Pause } from 'lucide-react';
 import Tlogo from '../assets/XTASY_TRANSPARENT_RED.png'
 import eye from '../assets/eye.png';
 import starSkull from '../assets/starSkull.png';
@@ -9,6 +9,9 @@ import { Countdown } from './Countdown';
 
 export const Hero = () => {
   const ref = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(true);
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['start start', 'end start'],
@@ -16,6 +19,29 @@ export const Hero = () => {
 
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+
+  useEffect(() => {
+    // Explicitly mute and attempt to play for strict mobile browsers
+    if (videoRef.current) {
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
+      videoRef.current.play().catch(() => {
+        // Autoplay was blocked (usually battery saver or strict policy)
+        setIsPlaying(false);
+      });
+    }
+  }, []);
+
+  const toggleVideo = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
 
   return (
     <motion.section
@@ -25,10 +51,13 @@ export const Hero = () => {
     >
       <div className="absolute inset-0 bg-black">
         <video 
+          ref={videoRef}
           autoPlay 
           loop 
           muted 
           playsInline
+          webkit-playsinline="true"
+          preload="auto"
           className="w-full h-full object-cover opacity-40 md:opacity-50 pointer-events-none"
         >
           <source src={heroVideo} type="video/mp4" />
@@ -69,7 +98,6 @@ export const Hero = () => {
             transition={{ duration: 1, type: "spring", bounce: 0.5, delay: 0.4 }}
           />
 
-
           <motion.div
             className="absolute -top-8 -right-4 md:-top-12 md:-right-8"
             animate={{
@@ -82,18 +110,8 @@ export const Hero = () => {
               repeatType: 'reverse',
             }}
           >
-            {/* <Zap className="w-12 h-12 md:w-20 md:h-20 text-neon-yellow fill-neon-yellow" /> */}
           </motion.div>
         </motion.div>
-
-        {/* <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="text-white text-xl md:text-3xl font-body tracking-widest uppercase mb-8"
-        >
-          Annual Cultural Fest 2026
-        </motion.p> */}
 
         <Countdown />
       </div>
@@ -108,6 +126,15 @@ export const Hero = () => {
           <p className="text-white text-xs tracking-widest mt-2">SCROLL</p>
         </motion.div>
       </a>
+
+      {/* Video Play/Pause Toggle */}
+      <button 
+        onClick={toggleVideo}
+        className="absolute bottom-12 left-6 md:left-12 z-50 bg-black/50 hover:bg-black/80 backdrop-blur-sm border border-white/20 p-3 rounded-full text-white transition-all duration-300 pointer-events-auto shadow-[0_0_15px_rgba(0,0,0,0.5)]"
+        aria-label={isPlaying ? "Pause background video" : "Play background video"}
+      >
+        {isPlaying ? <Pause className="w-5 h-5 md:w-6 md:h-6" /> : <Play className="w-5 h-5 md:w-6 md:h-6" />}
+      </button>
 
       <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-transparent via-transparent to-black opacity-30 pointer-events-none"
            style={{

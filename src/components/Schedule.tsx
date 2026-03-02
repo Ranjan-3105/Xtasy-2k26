@@ -7,32 +7,40 @@ import guitar1 from '../assets/guitarElem1.png';
 const scheduleData = [
   {
     day: 'DAY 1',
-    date: 'MARCH 15',
+    date: 'MARCH 17',
     events: [
-      { time: '10:00 AM', name: 'INAUGURATION CEREMONY', highlight: true },
-      { time: '12:00 PM', name: 'CODING HACKATHON BEGINS', highlight: false },
-      { time: '03:00 PM', name: 'DANCE PRELIMS', highlight: false },
-      { time: '06:00 PM', name: 'MUSIC NIGHT - OPENING ACT', highlight: true },
+      { time: 'TBD', name: 'BURNOUT (DANCE BATTLE)', highlight: true },
     ],
   },
   {
     day: 'DAY 2',
-    date: 'MARCH 16',
+    date: 'MARCH 18',
     events: [
-      { time: '10:00 AM', name: 'GAMING TOURNAMENTS', highlight: false },
-      { time: '02:00 PM', name: 'FASHION SHOW PRELIMS', highlight: false },
-      { time: '05:00 PM', name: 'LITERARY EVENTS', highlight: false },
-      { time: '08:00 PM', name: 'DANCE BATTLE FINALS', highlight: true },
+      { time: 'TBD', name: 'SINFONIETTA (SOLO SINGING)', highlight: true },
+      { time: 'TBD', name: 'RELAY ART CHALLENGE', highlight: false },
+      { time: 'TBD', name: 'CHAURAHA (NUKKAD)', highlight: true },
+      { time: 'TBD', name: 'NRUTYA NAIVEDYA', highlight: false },
+      { time: 'TBD', name: 'QUESTIONABLE: THE NSFW QUIZ', highlight: false },
+      { time: 'TBD', name: 'GUESSWORK IN PROGRESS', highlight: false },
     ],
   },
   {
     day: 'DAY 3',
-    date: 'MARCH 17',
+    date: 'MARCH 19',
     events: [
-      { time: '11:00 AM', name: 'HACKATHON PRESENTATIONS', highlight: false },
-      { time: '03:00 PM', name: 'FASHION SHOW FINALE', highlight: true },
-      { time: '06:00 PM', name: 'PRIZE DISTRIBUTION', highlight: false },
-      { time: '08:00 PM', name: 'CLOSING CEREMONY & CONCERT', highlight: true },
+      { time: 'TBD', name: 'DIGICLASH', highlight: true },
+      { time: 'TBD', name: 'SKETCHCLASH', highlight: false },
+      { time: 'TBD', name: 'RANGAMANCH', highlight: true },
+      { time: 'TBD', name: 'UNISON', highlight: false },
+      { time: 'TBD', name: 'MDMA: THE XTASY QUIZ', highlight: false },
+      { time: 'TBD', name: 'NEWSPRINT', highlight: false },
+    ],
+  },
+  {
+    day: 'DAY 4',
+    date: 'MARCH 20',
+    events: [
+      { time: 'TBD', name: 'BATTLE OF BANDS', highlight: true },
     ],
   },
 ];
@@ -55,7 +63,7 @@ export const Schedule = () => {
       ref={ref}
       className="min-h-screen bg-black py-24 px-4 md:px-8 lg:px-16 relative overflow-hidden"
     >
-      <div className="absolute top-1/3 left-0 w-24 h-24 md:w-48 md:h-48 opacity-30 md:opacity-20 pointer-events-none z-0">
+      <div className="hidden md:block absolute top-1/3 left-0 w-24 h-24 md:w-48 md:h-48 opacity-30 md:opacity-20 pointer-events-none z-0">
         <motion.img
           src={eye2}
           alt=""
@@ -64,7 +72,7 @@ export const Schedule = () => {
           transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
         />
       </div>
-      <div className="absolute bottom-1/4 right-0 w-32 h-32 md:w-64 md:h-64 opacity-20 md:opacity-10 pointer-events-none z-0 -scale-x-100">
+      <div className="hidden md:block absolute bottom-1/4 right-0 w-32 h-32 md:w-64 md:h-64 opacity-20 md:opacity-10 pointer-events-none z-0 -scale-x-100">
         <motion.img
           src={guitar1}
           alt=""
@@ -130,14 +138,14 @@ const DaySchedule = ({ daySchedule, index }: DayScheduleProps) => {
 
   return (
     <motion.div variants={itemVariants} className="relative">
-      <div className={`absolute left-0 md:left-1/2 top-0 bottom-0 w-1 ${
+      <div className={`absolute left-4 md:left-1/2 top-0 bottom-0 w-1 ${
         index % 2 === 0 ? 'bg-neon-yellow' : 'bg-hot-pink'
       } transform md:-translate-x-1/2`} />
 
-      <div className={`grid grid-cols-1 md:grid-cols-2 gap-8 ${
+      <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 ${
         index % 2 === 0 ? '' : 'md:flex-row-reverse'
       }`}>
-        <div className={`${index % 2 === 0 ? 'md:text-right md:pr-12' : 'md:col-start-2 md:pl-12'}`}>
+        <div className={`ml-12 md:ml-0 ${index % 2 === 0 ? 'md:text-right md:pr-12' : 'md:col-start-2 md:pl-12'}`}>
           <div className={`inline-block border-4 ${
             index % 2 === 0 ? 'border-neon-yellow' : 'border-hot-pink'
           } p-6 mb-6 bg-black`}>
@@ -152,7 +160,7 @@ const DaySchedule = ({ daySchedule, index }: DayScheduleProps) => {
           </div>
         </div>
 
-        <div className={`${index % 2 === 0 ? 'md:pl-12' : 'md:col-start-1 md:row-start-1 md:pr-12 md:text-right'}`}>
+        <div className={`ml-12 md:ml-0 ${index % 2 === 0 ? 'md:pl-12' : 'md:col-start-1 md:row-start-1 md:pr-12 md:text-right'}`}>
           <div className="space-y-4">
             {daySchedule.events.map((event, eventIndex) => (
               <motion.div
@@ -187,10 +195,10 @@ const DaySchedule = ({ daySchedule, index }: DayScheduleProps) => {
 
       <motion.div
         className={`absolute ${
-          index % 2 === 0 ? 'left-0 md:left-1/2' : 'left-0 md:left-1/2'
+          index % 2 === 0 ? 'left-[10px] md:left-1/2' : 'left-[10px] md:left-1/2'
         } top-0 w-6 h-6 ${
           index % 2 === 0 ? 'bg-neon-yellow' : 'bg-hot-pink'
-        } border-4 border-black transform md:-translate-x-1/2 rounded-full`}
+        } border-4 border-black transform -translate-x-1/2 md:-translate-x-1/2 rounded-full`}
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         transition={{ duration: 0.4 }}
