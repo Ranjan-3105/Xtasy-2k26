@@ -82,18 +82,18 @@ export const Hero = () => {
               repeatType: 'reverse',
             }}
           >
-            <Zap className="w-12 h-12 md:w-20 md:h-20 text-neon-yellow fill-neon-yellow" />
+            {/* <Zap className="w-12 h-12 md:w-20 md:h-20 text-neon-yellow fill-neon-yellow" /> */}
           </motion.div>
         </motion.div>
 
-        <motion.p
+        {/* <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="text-white text-xl md:text-3xl font-bold tracking-widest uppercase mb-8"
+          className="text-white text-xl md:text-3xl font-body tracking-widest uppercase mb-8"
         >
           Annual Cultural Fest 2026
-        </motion.p>
+        </motion.p> */}
 
         <Countdown />
       </div>

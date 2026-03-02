@@ -15,7 +15,7 @@ import { Team } from './components/Team';
 import { EventsPage } from './components/EventsPage';
 import { AboutPage } from './components/AboutPage';
 import { SponsorsPage } from './components/SponsorsPage';
-import { ContactPage } from './components/ContactPage';
+import { MerchPage } from './components/MerchPage';
 
 function Home() {
   return (
@@ -45,33 +45,75 @@ function Home() {
               </p>
             </div>
 
-            <div>
-              <h4 className="font-bold text-hot-pink mb-4 uppercase tracking-wider">Contact</h4>
-              <p className="text-white text-sm mb-2">Email: info@xtasy2026.com</p>
-              <p className="text-white text-sm">Phone: +91 1234567890</p>
-            </div>
+            <div className="border-t border-white pt-8 text-center space-y-3">
+  <p className="text-white text-sm uppercase tracking-wider">
+    Contact Information
+  </p>
 
-            <div>
-              <h4 className="font-bold text-hot-pink mb-4 uppercase tracking-wider">Follow Us</h4>
-              <div className="flex gap-4">
-                {['Instagram', 'Twitter', 'Facebook'].map((social) => (
-                  <a
-                    key={social}
-                    href="#"
-                    className="text-white hover:text-neon-yellow transition-colors text-sm uppercase"
-                  >
-                    {social}
-                  </a>
-                ))}
-              </div>
-            </div>
+  <div className="text-white text-sm space-y-1">
+    <p>
+      <span className="font-semibold">Coordinator:</span> Sarthak Mohapatra — 6370848789
+    </p>
+    <p>
+      <span className="font-semibold">Co-Coordinator:</span> Jagrat Sahoo — 8249365883
+    </p>
+    <p>
+      <span className="font-semibold">Email:</span>{" "}
+      <a
+        href="mailto:cultsec@outr.ac.in"
+        className="underline hover:opacity-80 transition duration-300"
+      >
+        cultsec@outr.ac.in
+      </a>
+    </p>
+  </div>
+</div>
+
+           <div>
+  <h4 className="font-bold text-hot-pink mb-4 uppercase tracking-wider">
+    Follow Us
+  </h4>
+
+  <div className="flex items-center gap-3">
+    <a
+      href="https://www.instagram.com/xtasyoutr/?hl=en"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex items-center gap-2 text-white text-sm uppercase tracking-wide transition-all duration-300"
+    >
+      {/* Instagram SVG */}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className="w-5 h-5 transition-all duration-300 group-hover:text-neon-yellow group-hover:scale-110"
+      >
+        <path d="M7.75 2C4.57 2 2 4.57 2 7.75v8.5C2 19.43 4.57 22 7.75 22h8.5C19.43 22 22 19.43 22 16.25v-8.5C22 4.57 19.43 2 16.25 2h-8.5zM12 7.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm5.25-.88a1.12 1.12 0 1 1-1.12 1.12 1.12 1.12 0 0 1 1.12-1.12z"/>
+      </svg>
+
+      <span className="group-hover:text-neon-yellow transition-colors duration-300">
+        Instagram
+      </span>
+    </a>
+  </div>
+</div>
+
           </div>
 
           <div className="border-t border-white pt-8 text-center">
-            <p className="text-white text-sm uppercase tracking-wider">
-              © 2026 XTASY. ALL RIGHTS RESERVED.
-            </p>
-          </div>
+  <p className="text-white text-sm tracking-wide">
+    © 2026 XTASY. Designed & developed by{" "}
+    <a
+      href="https://linkedin.com/in/soumya-ranjan-nanda-849489214"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="underline hover:opacity-80 transition duration-300"
+    >
+      SRN
+    </a>
+    .
+  </p>
+</div>
         </div>
       </footer>
     </div>
@@ -93,7 +135,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/team" element={<Team />} />
         <Route path="/sponsors" element={<SponsorsPage />} />
-        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/merch" element={<MerchPage />} />
       </Routes>
     </>
   );

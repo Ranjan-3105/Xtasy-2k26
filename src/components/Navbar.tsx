@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import logo from '../assets/Xtasy_Logo.png';
@@ -22,7 +23,7 @@ export const Navbar = () => {
     { name: 'About', href: '/about' },
     { name: 'Team', href: '/team' },
     { name: 'Sponsors', href: '/sponsors' },
-    { name: 'Contact Us', href: '/contact' },
+    { name: 'Merch', href: '/merch' },
   ];
 
   return (
