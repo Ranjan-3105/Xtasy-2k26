@@ -34,9 +34,9 @@ export const Hero = () => {
           <motion.img
             src={logo}
             alt="Xtasy Logo"
-            className="w-32 h-auto md:w-56 lg:w-64 mb-4 object-contain"
+            className="w-32 h-auto md:w-56 lg:w-64 mb-7 object-contain"
             initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
+            animate={{ scale: 1.5 }}
             transition={{ duration: 1, type: "spring", bounce: 0.5, delay: 0.4 }}
           />
 
