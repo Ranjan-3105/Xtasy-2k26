@@ -60,7 +60,7 @@ function HomePage() {
                 </a>
                 <div className="flex items-center gap-3 hover:text-white transition-colors mt-2">
                   <MapPin className="w-5 h-5 text-hot-pink flex-shrink-0" />
-                  <span>College of Engineering and Technology, Bhubaneswar</span>
+                  <span>Odisha University of Technology and Research, Bhubaneswar</span>
                 </div>
               </div>
             </div>
@@ -72,7 +72,7 @@ function HomePage() {
                   href="https://www.instagram.com/xtasyoutr/?hl=en" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-hot-pink hover:text-white transition-all duration-300"
+                  className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-hot-pink transition-all duration-300"
                   aria-label="Instagram"
                 >
                   <Instagram className="w-6 h-6" />
@@ -92,10 +92,20 @@ function HomePage() {
             </div>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-white/10 text-center text-white/50 text-sm">
-            <p>&copy; 2026 XTASY Fest. All rights reserved.</p>
-            <p className="mt-2">Developed alongside the XTASY Tech Team.</p>
-          </div>
+          <div className="border-t border-white pt-8 text-center">
+  <p className="text-white text-sm tracking-wide">
+    © 2026 XTASY. Designed & developed by{" "}
+    <a
+      href="https://linkedin.com/in/soumya-ranjan-nanda-849489214"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="underline hover:opacity-80 transition duration-300"
+    >
+      SRN
+    </a>
+    .
+  </p>
+</div>
         </div>
       </footer>
     </div>
