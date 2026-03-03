@@ -4,7 +4,7 @@ import { Zap, Play, Pause } from 'lucide-react';
 import Tlogo from '../assets/XTASY_TRANSPARENT_RED.png'
 import eye from '../assets/eye.png';
 import starSkull from '../assets/starSkull.png';
-import heroVideo from '../assets/XTC bnw Backdrop.mp4';
+import heroVideo from '../assets/colored_backdrop.mp4';
 import { Countdown } from './Countdown';
 
 export const Hero = () => {

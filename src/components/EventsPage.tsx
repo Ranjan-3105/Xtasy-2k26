@@ -19,6 +19,8 @@ const items = [
   { image: 'https://picsum.photos/300/500?grayscale', link: '#', title: 'MDMA', description: '19 March 2026' },
   { image: 'https://picsum.photos/500/300?grayscale', link: '#', title: 'NEWSPRINT', description: '19 March 2026' },
   { image: 'https://picsum.photos/400/350?grayscale', link: '#', title: 'BATTLE OF BANDS', description: '20 March 2026' },
+  { image: 'https://picsum.photos/450/400?grayscale', link: '#', title: 'YUVA SANSAD', description: '20 March 2026' },
+  { image: 'https://picsum.photos/550/450?grayscale', link: '#', title: 'CINEFACTORY', description: '20 March 2026' },
 ];
 
 export const EventsPage = () => {

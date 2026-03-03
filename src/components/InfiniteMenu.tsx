@@ -925,7 +925,7 @@ export default function InfiniteMenu({ items = [], scale = 1.0 }: InfiniteMenuPr
     if (activeItem.link.startsWith('http')) {
       window.open(activeItem.link, '_blank');
     } else {
-      console.log('Internal route:', activeItem.link);
+
     }
   };
 

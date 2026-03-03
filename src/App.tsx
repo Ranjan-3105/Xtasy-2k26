@@ -8,6 +8,7 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Events } from './components/Events';
+import { Gallery } from './components/Gallery';
 import { Schedule } from './components/Schedule';
 import { Register } from './components/Register';
 import { Mail, MapPin, Phone, Instagram } from 'lucide-react';
@@ -30,6 +31,7 @@ function HomePage() {
         <Hero />
         <div id="about"><About /></div>
         <div id="events"><Events /></div>
+        <div id="gallery"><Gallery /></div>
         <Schedule />
         <Register />
         

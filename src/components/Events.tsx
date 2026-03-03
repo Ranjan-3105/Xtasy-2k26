@@ -1,24 +1,20 @@
 import { motion } from 'framer-motion';
 import { useScrollDepth } from '../hooks/useScrollDepth';
-import { Music, Zap, Sparkles, Users, BookOpen, Monitor, MessageSquare, Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Music, Zap, Sparkles, Users, BookOpen, Monitor, MessageSquare, Star, Landmark, Video } from 'lucide-react';
 import eye from '../assets/eye.png';
 import guitar from '../assets/guitarElem1.png';
 
 const events = [
   { title: 'BURNOUT', icon: Zap, color: 'neon-yellow', description: 'Dance Battle', rotationClass: 'md:rotate-2' },
-  { title: 'SINFONIETTA', icon: Music, color: 'hot-pink', description: 'Solo Singing', rotationClass: 'md:-rotate-1' },
   { title: 'RELAY ART CHALLENGE', icon: Star, color: 'white', description: 'Art Challenge', rotationClass: 'md:rotate-1' },
   { title: 'CHAURAHA', icon: Users, color: 'neon-yellow', description: 'Nukkad', rotationClass: 'md:-rotate-2' },
-  { title: 'NRUTYA NAIVEDYA', icon: Sparkles, color: 'hot-pink', description: 'Classical Dance', rotationClass: 'md:rotate-1' },
-  { title: 'QUESTIONABLE', icon: MessageSquare, color: 'white', description: 'The NSFW Quiz', rotationClass: 'md:-rotate-1' },
-  { title: 'GUESSWORK IN PROGRESS', icon: BookOpen, color: 'neon-yellow', description: 'Themed Quiz', rotationClass: 'md:rotate-2' },
-  { title: 'DIGICLASH', icon: Monitor, color: 'hot-pink', description: 'Digital Art', rotationClass: 'md:-rotate-1' },
-  { title: 'SKETCHCLASH', icon: Star, color: 'white', description: 'Sketching', rotationClass: 'md:rotate-1' },
-  { title: 'RANGAMANCH', icon: Users, color: 'neon-yellow', description: 'Drama/Play', rotationClass: 'md:-rotate-2' },
   { title: 'UNISON', icon: Zap, color: 'hot-pink', description: 'Group Dance', rotationClass: 'md:rotate-1' },
   { title: 'MDMA', icon: MessageSquare, color: 'white', description: 'The Xtasy Quiz', rotationClass: 'md:-rotate-1' },
   { title: 'NEWSPRINT', icon: BookOpen, color: 'neon-yellow', description: 'Journalism/Writing', rotationClass: 'md:rotate-2' },
   { title: 'BATTLE OF BANDS', icon: Music, color: 'hot-pink', description: 'Live Band Competition', rotationClass: 'md:-rotate-1' },
+  { title: 'YUVA SANSAD', icon: Landmark, color: 'white', description: 'Parliament Debate', rotationClass: 'md:rotate-1' },
+  { title: 'CINEFACTORY', icon: Video, color: 'neon-yellow', description: 'Short-Film Making', rotationClass: 'md:-rotate-2' },
 ];
 
 export const Events = () => {
@@ -86,6 +82,33 @@ export const Events = () => {
           {events.map((event, index) => (
             <EventCard key={event.title} event={event} index={index} />
           ))}
+        </motion.div>
+
+        <motion.div
+           initial={{ opacity: 0, y: 30 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true }}
+           transition={{ duration: 0.6, delay: 0.4 }}
+           className="mt-16 md:mt-24 flex justify-center"
+        >
+          <Link
+            to="/events"
+            className="group relative inline-flex items-center justify-center px-8 py-4 font-heading text-xl md:text-2xl text-black uppercase tracking-widest bg-neon-yellow overflow-hidden transition-transform hover:scale-105"
+            onClick={() => window.scrollTo(0, 0)}
+          >
+             <span className="relative z-10 flex items-center gap-2">
+                Browse All Events
+                <motion.span
+                  className="inline-block"
+                  initial={{ x: 0 }}
+                  whileHover={{ x: 5 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                >
+                  →
+                </motion.span>
+             </span>
+             <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out" />
+          </Link>
         </motion.div>
       </div>
 
