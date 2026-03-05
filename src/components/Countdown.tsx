@@ -40,13 +40,13 @@ export const Countdown = () => {
       <div className="text-white text-lg md:text-2xl font-bold uppercase tracking-[0.2em] mb-7 font-headingWide" style={{ textShadow: '2px 2px 0px #E6007E' }}>
         TIME TO <span className="text-neon-yellow">XTASY</span>
       </div>
-      <div className="flex gap-1 md:gap-2 -skew-x-12 transform-gpu pb-4">
+      <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 pb-4">
         <TimeUnit value={timeLeft.days} label="DAYS" />
-        <span className="text-3xl md:text-5xl font-headingWide text-white font-bold self-center animate-pulse" style={{ textShadow: '2px 2px 0px #E6007E' }}>:</span>
+        <span className="text-xl md:text-2xl font-body text-white/30 font-bold self-center">:</span>
         <TimeUnit value={timeLeft.hours} label="HRS" />
-        <span className="text-3xl md:text-5xl font-headingWide text-white font-bold self-center animate-pulse" style={{ textShadow: '2px 2px 0px #E6007E' }}>:</span>
+        <span className="text-xl md:text-2xl font-body text-white/30 font-bold self-center">:</span>
         <TimeUnit value={timeLeft.minutes} label="MIN" />
-        <span className="text-3xl md:text-5xl font-headingWide text-white font-bold self-center animate-pulse" style={{ textShadow: '2px 2px 0px #E6007E' }}>:</span>
+        <span className="text-xl md:text-2xl font-body text-white/30 font-bold self-center">:</span>
         <TimeUnit value={timeLeft.seconds} label="SEC" />
       </div>
     </motion.div>
@@ -54,23 +54,19 @@ export const Countdown = () => {
 };
 
 const TimeUnit = ({ value, label }: { value: number; label: string }) => (
-  <div className="relative group mx-1 md:mx-1.5 perspective-1000">
-    {/* Shadow / distressed background layer block */}
-    <div className="absolute inset-0 bg-[#E6007E] translate-x-1 translate-y-1 md:translate-x-2 md:translate-y-2 z-0 border-2 md:border-[3px] border-black" />
-    
-    {/* Main container */}
-    <div className="relative z-10 bg-[#FEEA07] px-2 py-1.5 md:px-4 md:py-3 flex flex-col items-center justify-center border-2 md:border-[3px] border-black shadow-[inset_0_0_10px_rgba(0,0,0,0.2)] hover:-translate-y-1 hover:-translate-x-1 transition-transform">
+  <div className="relative group mx-1 md:mx-1.5">
+    {/* Glassmorphism horizontal pill */}
+    <div className="relative z-10 bg-white/5 backdrop-blur-md px-4 py-2 md:px-6 md:py-3 flex items-baseline gap-2 border border-white/10 rounded-full hover:border-hot-pink/50 transition-all duration-300">
       
       {/* Number Display */}
       <span 
-        className="font-headingWide text-4xl md:text-6xl text-white font-black tracking-tighter drop-shadow-[2px_2px_0px_rgba(0,0,0,1)]" 
-        style={{ WebkitTextStroke: '1px black' }}
+        className="font-body text-2xl md:text-4xl text-white font-black tracking-tighter drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]"
       >
         {value.toString().padStart(2, '0')}
       </span>
       
       {/* Label Display */}
-      <span className="font-headingWide font-bold text-black text-[10px] md:text-[16px] tracking-widest mt-1 border-t-2 md:border-t-4 border-black w-full text-center pt-1 md:pt-1.5 leading-none">
+      <span className="font-body font-bold text-white/50 text-[10px] md:text-[12px] tracking-widest uppercase group-hover:text-hot-pink transition-colors">
         {label}
       </span>
     </div>
