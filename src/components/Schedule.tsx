@@ -149,12 +149,12 @@ const DaySchedule = ({ daySchedule, index }: DayScheduleProps) => {
           <div className={`inline-block border-4 ${
             index % 2 === 0 ? 'border-neon-yellow' : 'border-hot-pink'
           } p-6 mb-6 bg-black`}>
-            <h3 className="font-heading text-4xl md:text-5xl text-white uppercase mb-2">
+            <h3 className="font-heading text-4xl md:text-6xl text-white uppercase mb-4 tracking-tighter">
               {daySchedule.day}
             </h3>
-            <p className={`text-xl font-bold ${
+            <p className={`text-xl md:text-2xl font-bold ${
               index % 2 === 0 ? 'text-neon-yellow' : 'text-hot-pink'
-            }`}>
+            } tracking-widest`}>
               {daySchedule.date}
             </p>
           </div>
@@ -177,14 +177,14 @@ const DaySchedule = ({ daySchedule, index }: DayScheduleProps) => {
                     : 'border-white'
                 } p-4 hover:scale-105 transition-transform duration-300`}
               >
-                <p className={`text-sm font-bold mb-1 ${
+                <p className={`text-sm md:text-base font-bold mb-1 font-body ${
                   event.highlight ? 'text-black' : 'text-neon-yellow'
                 }`}>
                   {event.time}
                 </p>
-                <p className={`font-bold uppercase text-sm md:text-base ${
+                <p className={`font-bold uppercase text-base md:text-xl font-body ${
                   event.highlight ? 'text-black' : 'text-white'
-                }`}>
+                } tracking-tight`}>
                   {event.name}
                 </p>
               </motion.div>

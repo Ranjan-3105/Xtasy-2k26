@@ -94,13 +94,13 @@ export const About = () => {
           >
             <div className="absolute -top-2 -left-2 w-full h-full border-2 border-neon-yellow" />
             <div className="relative z-10">
-              <p className="text-white text-2xl md:text-4xl font-bold leading-tight uppercase mb-6">
+              <p className="text-white text-2xl md:text-3xl font-heading leading-tight uppercase mb-6">
                 ANNUAL CULTURAL FEST OF OUTR
               </p>
-              <p className="text-white text-base md:text-lg leading-relaxed">
-                XTASY is the three-day cultural rebellion of Odisha University of Technology and Research.
-                It's a sanctuary for the dreamers, a stage for the visionaries, and a sonic boom of talent.
-                Where engineering excellence meets raw artistic expression.
+              <p className="text-white/80 text-lg md:text-xl leading-relaxed mb-10 font-body">
+              XTASY is the heartbeat of OUTR, where artistic expression meets
+              unbridled passion. It's more than just a festival; it's a movement
+              that celebrates the raw talent and creative spirit of our students.
               </p>
             </div>
           </motion.div>
@@ -113,17 +113,17 @@ export const About = () => {
               <h3 className="font-heading text-3xl md:text-4xl text-neon-yellow uppercase mb-4">
                 10000+
               </h3>
-              <p className="text-white text-sm md:text-base uppercase tracking-wider">
+              <p className="text-white text-sm md:text-base uppercase tracking-wider font-body">
                 EXPECTED FOOTFALL
               </p>
             </div>
 
             <div className="border-4 border-neon-yellow p-6 md:p-8 -rotate-1 bg-white">
               <h3 className="font-heading text-3xl md:text-4xl text-black uppercase mb-4">
-                50+
+                75K+
               </h3>
-              <p className="text-black text-sm md:text-base uppercase tracking-wider font-bold">
-                ELECTRIFYING EVENTS
+              <p className="text-black text-sm md:text-base uppercase tracking-wider font-bold font-body">
+                PRIZE POOL
               </p>
             </div>
           </motion.div>
@@ -139,7 +139,7 @@ export const About = () => {
               className="border-2 border-hot-pink p-8 text-center hover:bg-hot-pink transition-all duration-300 group bg-black/30 backdrop-blur-sm"
               style={{ transform: `rotate(${index % 2 === 0 ? '1deg' : '-1deg'})` }}
             >
-              <h4 className="font-heading text-3xl md:text-4xl text-white group-hover:text-black transition-colors">
+              <h4 className="font-heading text-2xl md:text-4xl text-white group-hover:text-black transition-colors">
                 {word}
               </h4>
             </div>

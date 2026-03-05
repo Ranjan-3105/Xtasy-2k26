@@ -1,7 +1,16 @@
 import { motion } from 'framer-motion';
 import { useScrollDepth } from '../hooks/useScrollDepth';
 import { Link } from 'react-router-dom';
-import { Music, Zap, Sparkles, Users, BookOpen, Monitor, MessageSquare, Star, Landmark, Video } from 'lucide-react';
+import {
+  Music,
+  Users,
+  Zap,
+  MessageSquare,
+  Star,
+  BookOpen,
+  Landmark,
+  Video
+} from 'lucide-react';
 import eye from '../assets/eye.png';
 import guitar from '../assets/guitarElem1.png';
 
@@ -199,7 +208,7 @@ const EventCard = ({ event }: EventCardProps) => {
 
           <div className={`w-12 md:w-16 h-1 ${event.color === 'white' ? 'bg-white' : `bg-${event.color}`} mb-4 md:mb-6`} />
 
-          <p className="text-white text-xs md:text-base leading-relaxed uppercase tracking-wide">
+          <p className="text-white text-sm md:text-base font-bold uppercase tracking-wider mb-6 line-clamp-2 font-body">
             {event.description}
           </p>
         </div>

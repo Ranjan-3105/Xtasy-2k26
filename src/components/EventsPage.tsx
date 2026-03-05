@@ -88,7 +88,7 @@ export const EventsPage = () => {
             <span className="text-neon-yellow">EVENTS</span>
           </h2>
           <div className="w-24 md:w-32 h-1 md:h-2 bg-hot-pink mx-auto mt-4 md:mt-6" />
-          <p className="text-white/70 mt-4 md:mt-8 uppercase tracking-[0.2em] md:tracking-widest text-xs md:text-base font-bold">
+          <p className="text-white/80 mt-6 md:mt-10 uppercase tracking-[0.3em] text-sm md:text-xl font-bold italic">
             Scroll and drag to discover what's coming
           </p>
         </motion.div>
@@ -125,15 +125,7 @@ export const EventsPage = () => {
               {selectedEvent.title}
             </h3>
 
-            <div className="w-full flex-1 flex flex-col justify-start">
-              <img
-                src={selectedEvent.image}
-                alt="Event Poster"
-                className="w-full h-auto object-contain"
-              />
-            </div>
-
-            <div className="px-6 md:px-10 mt-8">
+            <div className="px-6 md:px-10 mt-4 mb-8">
               <a
                 href={selectedEvent.link}
                 target="_blank"
@@ -143,6 +135,14 @@ export const EventsPage = () => {
                 <div className="absolute inset-0 bg-hot-pink translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out z-0"></div>
                 <span className="relative z-10 group-hover:text-black transition-colors duration-300">Register Now</span>
               </a>
+            </div>
+
+            <div className="w-full flex-1 flex flex-col justify-start">
+              <img
+                src={selectedEvent.image}
+                alt="Event Poster"
+                className="w-full h-auto object-contain border-t border-white/10"
+              />
             </div>
           </>
         )}

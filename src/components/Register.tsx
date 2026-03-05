@@ -130,7 +130,7 @@ export const Register = () => {
           </div>
 
           <div className="border-4 border-black p-6 bg-hot-pink will-change-transform transform hover:scale-105 transition-transform duration-300">
-            <h3 className="font-heading text-4xl text-white mb-2">₹5L+</h3>
+            <h3 className="font-heading text-4xl text-white mb-2">₹75K+</h3>
             <p className="text-white font-bold uppercase text-sm">PRIZE POOL</p>
           </div>
 

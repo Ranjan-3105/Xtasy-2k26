@@ -10,7 +10,7 @@ export default {
       fontFamily: {
         heading: ["Bad Grunge", "sans-serif"],
         headingWide: ["Bad Grunge", "sans-serif"],
-        body: ["Space Grotesk", "sans-serif"],
+        body: ["Tox Typewriter", "sans-serif"],
       },
       animation: {
         'flicker': 'flicker 2s infinite',

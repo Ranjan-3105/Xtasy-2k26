@@ -44,7 +44,7 @@ export const Gallery = () => {
             </h2>
           </div>
           <div className="w-48 h-2 bg-neon-yellow" />
-          <p className="text-white text-lg md:text-xl mt-6 uppercase tracking-wider">
+          <p className="text-white text-lg md:text-xl mt-6 uppercase tracking-widest font-heading">
             GLIMPSES FROM PAST EDITIONS
           </p>
         </motion.div>
@@ -114,8 +114,8 @@ const GalleryItem = ({ image, index }: GalleryItemProps) => {
         </motion.div>
       </motion.div>
 
-      <div className={`absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-90 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300`}>
-        <p className="text-white text-sm font-bold uppercase tracking-wider">
+      <div className={`absolute bottom-0 left-0 right-0 p-4 bg-black/90 backdrop-blur-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300`}>
+        <p className="text-white text-sm font-bold uppercase tracking-widest font-body">
           EVENT HIGHLIGHT #{image.id}
         </p>
       </div>

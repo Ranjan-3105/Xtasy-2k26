@@ -38,7 +38,7 @@ export const Navbar = () => {
     >
       <div className="flex items-center gap-3 relative z-50">
         <img src={logo} alt="Xtasy Logo" className="h-10 w-auto object-contain" />
-        <Link to="/" onClick={() => setIsOpen(false)} className="font-heading text-2xl md:text-3xl text-neon-yellow hover:text-white transition-colors uppercase tracking-wider drop-shadow-[0_0_8px_rgba(254,234,7,0.5)]">
+        <Link to="/" onClick={() => setIsOpen(false)} className="font-heading text-2xl md:text-4xl text-neon-yellow hover:text-white transition-colors uppercase tracking-wider drop-shadow-[0_0_8px_rgba(254,234,7,0.5)]">
           XTASY
         </Link>
       </div>
@@ -48,7 +48,7 @@ export const Navbar = () => {
           <Link
             key={link.name}
             to={link.href}
-            className="font-heading text-white text-lg uppercase tracking-wider hover:text-hot-pink transition-colors relative group"
+            className="font-body text-white text-lg uppercase tracking-wider hover:text-hot-pink transition-colors relative group font-bold"
           >
             {link.name}
             <span className="absolute -bottom-1 left-0 w-0 h-1 bg-hot-pink transition-all duration-300 group-hover:w-full group-hover:shadow-[0_0_10px_#E6007E]"></span>
@@ -139,7 +139,7 @@ export const Navbar = () => {
             <Link
               to={link.href}
               onClick={() => setIsOpen(false)}
-              className="font-heading text-white text-lg uppercase tracking-wider hover:text-hot-pink transition-colors relative group"
+              className="font-body text-white text-lg uppercase tracking-wider hover:text-hot-pink transition-colors relative group font-bold"
             >
               {link.name}
               <span className="absolute -bottom-1 left-1/2 w-0 h-0.5 bg-hot-pink transition-all duration-300 group-hover:w-full group-hover:left-0 group-hover:shadow-[0_0_10px_#E6007E]"></span>

@@ -45,21 +45,21 @@ function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 text-center md:text-left">
             <div>
               <h3 className="font-heading text-3xl text-neon-yellow mb-6">CONTACT US</h3>
-              <div className="space-y-4 flex flex-col items-center md:items-start text-white/70">
-                <a href="mailto:info@xtasyfest.com" className="flex items-center gap-3 hover:text-white transition-colors">
-                  <Mail className="w-5 h-5 text-hot-pink" />
+              <div className="space-y-4 flex flex-col items-center md:items-start text-white/70 font-body font-bold">
+                <a href="mailto:info@xtasyfest.com" className="flex items-center gap-4 hover:text-white transition-colors text-lg">
+                  <Mail className="w-6 h-6 text-hot-pink" />
                   cultsec@outr.ac.in
                 </a>
-                <a href="tel:+918804928091" className="flex items-center gap-3 hover:text-white transition-colors">
-                  <Phone className="w-5 h-5 text-hot-pink" />
+                <a href="tel:+918804928091" className="flex items-center gap-4 hover:text-white transition-colors text-lg">
+                  <Phone className="w-6 h-6 text-hot-pink" />
                   Cordinator: +91 6370848789
                 </a>
-                <a href="tel:+917608823126" className="flex items-center gap-3 hover:text-white transition-colors">
-                  <Phone className="w-5 h-5 text-hot-pink" />
+                <a href="tel:+917608823126" className="flex items-center gap-4 hover:text-white transition-colors text-lg">
+                  <Phone className="w-6 h-6 text-hot-pink" />
                   Co-Cordinator: +91 8249365883
                 </a>
-                <div className="flex items-center gap-3 hover:text-white transition-colors mt-2">
-                  <MapPin className="w-5 h-5 text-hot-pink flex-shrink-0" />
+                <div className="flex items-center gap-4 hover:text-white transition-colors mt-2 text-lg leading-tight">
+                  <MapPin className="w-6 h-6 text-hot-pink flex-shrink-0" />
                   <span>Odisha University of Technology and Research, Bhubaneswar</span>
                 </div>
               </div>
@@ -82,12 +82,12 @@ function HomePage() {
 
             <div className="flex flex-col items-center md:items-start">
               <h3 className="font-heading text-3xl text-neon-yellow mb-6">QUICK LINKS</h3>
-              <div className="space-y-3 flex flex-col items-center md:items-start text-white/70">
+              <div className="space-y-3 flex flex-col items-center md:items-start text-white/70 font-body font-bold">
                 <Link to="/events" className="hover:text-hot-pink transition-colors">Events</Link>
                 <Link to="/about" className="hover:text-hot-pink transition-colors">About</Link>
                 <Link to="/sponsors" className="hover:text-hot-pink transition-colors">Sponsors</Link>
                 <Link to="/team" className="hover:text-hot-pink transition-colors">Team</Link>
-                <a href="https://forms.google.com" target="_blank" rel="noopener noreferrer" className="hover:text-hot-pink transition-colors text-neon-yellow">Register Now</a>
+                <a href="https://forms.google.com" target="_blank" rel="noopener noreferrer" className="hover:text-hot-pink transition-colors text-neon-yellow font-bold">Register Now</a>
               </div>
             </div>
           </div>

@@ -67,13 +67,13 @@ export const Hero = () => {
       <div className="absolute top-0 left-0 w-32 h-32 bg-hot-pink opacity-20 blur-[100px]" />
       <div className="absolute bottom-0 right-0 w-32 h-32 bg-neon-yellow opacity-20 blur-[100px]" />
 
-      <motion.img
+      {/* <motion.img
         src={eye}
         alt=""
         className="absolute top-[10%] left-[5%] md:top-[20%] md:left-[10%] w-16 h-16 md:w-24 md:h-24 object-contain opacity-50 md:opacity-60 pointer-events-none z-0"
         animate={{ y: [0, -20, 0], rotate: [0, 10, -10, 0] }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-      />
+      /> */}
       <motion.img
         src={starSkull}
         alt=""
@@ -123,7 +123,7 @@ export const Hero = () => {
           className="flex flex-col items-center"
         >
           <Zap className="w-8 h-8 text-hot-pink fill-hot-pink rotate-180" />
-          <p className="text-white text-xs tracking-widest mt-2">SCROLL</p>
+          <span className="text-white text-xs tracking-[0.3em] font-body font-bold">SCROLL</span>
         </motion.div>
       </a>
 

@@ -7,7 +7,7 @@ export const SponsorsPage = () => {
       <h2 className="font-headingWide text-4xl md:text-6xl text-white uppercase tracking-wider text-shadow-glow">
         Sponsors <span className="text-neon-yellow">Coming Soon</span>
       </h2>
-      <p className="text-white mt-6 uppercase tracking-widest text-sm md:text-base">
+      <p className="text-white mt-6 uppercase tracking-widest text-sm md:text-base font-bold">
         Our esteemed partners will be revealed soon.
       </p>
     </div>

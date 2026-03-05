@@ -7,7 +7,7 @@ export const MerchPage = () => {
       <h2 className="font-headingWide text-4xl md:text-6xl text-white uppercase tracking-wider text-shadow-glow">
         Merch <span className="text-neon-yellow">Coming Soon</span>
       </h2>
-      <p className="text-white mt-6 uppercase tracking-widest text-sm md:text-base">
+      <p className="text-white mt-6 uppercase tracking-widest text-sm md:text-base font-bold">
         Our exclusive merchandise will be available shortly.
       </p>
     </div>

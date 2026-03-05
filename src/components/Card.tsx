@@ -78,14 +78,14 @@ export default function Card() {
             <div className="p-4">
               <motion.h3
                 layoutId={`name-${dev.id}`}
-                className="text-lg font-semibold"
+                className="text-lg font-bold text-white group-hover:text-neon-yellow transition-colors"
               >
                 {dev.name}
               </motion.h3>
 
               <motion.p
                 layoutId={`role-${dev.id}`}
-                className="text-sm text-neutral-400"
+                className="text-sm text-neutral-400 font-medium tracking-wide"
               >
                 {dev.role}
               </motion.p>
@@ -129,7 +129,7 @@ export default function Card() {
 
                   <motion.p
                     layoutId={`role-${active.id}`}
-                    className="text-neutral-400"
+                    className="text-lg text-hot-pink font-bold uppercase tracking-widest"
                   >
                     {active.role}
                   </motion.p>

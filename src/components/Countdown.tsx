@@ -37,7 +37,7 @@ export const Countdown = () => {
       transition={{ duration: 1, delay: 0.8 }}
       className="flex flex-col items-center justify-center mt-2 relative z-20"
     >
-      <div className="text-white text-sm md:text-xl font-bold uppercase tracking-widest mb-6 font-headingWide" style={{ textShadow: '2px 2px 0px #E6007E' }}>
+      <div className="text-white text-lg md:text-2xl font-bold uppercase tracking-[0.2em] mb-7 font-headingWide" style={{ textShadow: '2px 2px 0px #E6007E' }}>
         TIME TO <span className="text-neon-yellow">XTASY</span>
       </div>
       <div className="flex gap-1 md:gap-2 -skew-x-12 transform-gpu pb-4">
@@ -63,14 +63,14 @@ const TimeUnit = ({ value, label }: { value: number; label: string }) => (
       
       {/* Number Display */}
       <span 
-        className="font-headingWide text-3xl md:text-5xl text-white font-black tracking-tighter drop-shadow-[2px_2px_0px_rgba(0,0,0,1)]" 
+        className="font-headingWide text-4xl md:text-6xl text-white font-black tracking-tighter drop-shadow-[2px_2px_0px_rgba(0,0,0,1)]" 
         style={{ WebkitTextStroke: '1px black' }}
       >
         {value.toString().padStart(2, '0')}
       </span>
       
       {/* Label Display */}
-      <span className="font-headingWide font-bold text-black text-[10px] md:text-[14px] tracking-widest mt-1 border-t-2 md:border-t-4 border-black w-full text-center pt-1 md:pt-1.5">
+      <span className="font-headingWide font-bold text-black text-[10px] md:text-[16px] tracking-widest mt-1 border-t-2 md:border-t-4 border-black w-full text-center pt-1 md:pt-1.5 leading-none">
         {label}
       </span>
     </div>

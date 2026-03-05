@@ -5,8 +5,8 @@
 /* ================= BAD GRUNGE ================= */
 
 @font-face {
-  font-family: "Bad Grunge";
-  src: url("./fonts/bad_grunge/BAD GRUNGE.ttf") format("truetype");
+  font-family: "Tox Typewriter";
+  src: url("./fonts/tox_typewriter/Tox Typewriter.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -16,32 +16,6 @@
   font-family: "Bad Grunge";
   src: url("./fonts/bad_grunge/BAD GRUNGE.ttf") format("truetype");
   font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* ================= SPACE GROTESK ================= */
-
-@font-face {
-  font-family: "Space Grotesk";
-  src: url("./fonts/SpaceGrotesk-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Space Grotesk";
-  src: url("./fonts/SpaceGrotesk-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Space Grotesk";
-  src: url("./fonts/SpaceGrotesk-SemiBold.woff2") format("woff2");
-  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
