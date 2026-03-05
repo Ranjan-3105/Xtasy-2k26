@@ -52,11 +52,11 @@ function HomePage() {
                 </a>
                 <a href="tel:+918804928091" className="flex items-center gap-3 hover:text-white transition-colors">
                   <Phone className="w-5 h-5 text-hot-pink" />
-                  Sarthak Mohapatra: +91 6370848789
+                  Cordinator: +91 6370848789
                 </a>
                 <a href="tel:+917608823126" className="flex items-center gap-3 hover:text-white transition-colors">
                   <Phone className="w-5 h-5 text-hot-pink" />
-                  Jagrat Sahoo: +91 8249365883
+                  Co-Cordinator: +91 8249365883
                 </a>
                 <div className="flex items-center gap-3 hover:text-white transition-colors mt-2">
                   <MapPin className="w-5 h-5 text-hot-pink flex-shrink-0" />
