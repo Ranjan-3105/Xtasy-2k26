@@ -2,9 +2,10 @@ import { motion } from 'framer-motion';
 import { useScrollDepth } from '../hooks/useScrollDepth';
 import eye2 from '../assets/eye2.png';
 import guitar2 from '../assets/guitarelem2.png';
+import aboutBg from '../assets/about_bg.png';
 
 export const About = () => {
-  const { ref, isInView } = useScrollDepth({ threshold: 0.3 });
+  const { ref } = useScrollDepth({ threshold: 0.3 });
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -32,12 +33,25 @@ export const About = () => {
   return (
     <section
       ref={ref}
-      className="min-h-screen bg-black py-24 px-4 md:px-8 lg:px-16 relative"
+      className="min-h-screen bg-black py-24 px-4 md:px-8 lg:px-16 relative overflow-hidden"
       style={{
         perspective: '1000px',
         transformStyle: 'preserve-3d',
       }}
     >
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <motion.img 
+          initial={{ filter: 'grayscale(100%)' }}
+          whileInView={{ filter: 'grayscale(40%)' }}
+          transition={{ duration: 2.5, ease: "easeOut" }}
+          src={aboutBg} 
+          alt="" 
+          className="w-full h-full object-cover opacity-40"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/30 to-black" />
+      </div>
+
       <div className="absolute top-20 right-5 md:right-10 w-24 h-24 md:w-48 md:h-48 opacity-30 md:opacity-20 pointer-events-none z-0">
         <motion.img
           src={guitar2}
@@ -60,8 +74,9 @@ export const About = () => {
       <motion.div
         variants={containerVariants}
         initial="hidden"
-        animate={isInView ? 'visible' : 'hidden'}
-        className="max-w-7xl mx-auto"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        className="max-w-7xl mx-auto relative z-10"
       >
         <motion.div variants={itemVariants} className="mb-16">
           <h2 className="font-headingWide text-6xl md:text-8xl lg:text-9xl uppercase text-neon-yellow mb-4 leading-none">
@@ -80,12 +95,12 @@ export const About = () => {
             <div className="absolute -top-2 -left-2 w-full h-full border-2 border-neon-yellow" />
             <div className="relative z-10">
               <p className="text-white text-2xl md:text-4xl font-bold leading-tight uppercase mb-6">
-                WHERE CHAOS MEETS CREATIVITY
+                ANNUAL CULTURAL FEST OF OUTR
               </p>
               <p className="text-white text-base md:text-lg leading-relaxed">
-                XTASY isn't just another college fest. It's a three-day rebellion against the ordinary.
-                A sonic boom of talent. A visual explosion of creativity. Where boundaries blur and
-                possibilities ignite.
+                XTASY is the three-day cultural rebellion of Odisha University of Technology and Research.
+                It's a sanctuary for the dreamers, a stage for the visionaries, and a sonic boom of talent.
+                Where engineering excellence meets raw artistic expression.
               </p>
             </div>
           </motion.div>
@@ -94,12 +109,12 @@ export const About = () => {
             variants={itemVariants}
             className="lg:col-span-5 space-y-6"
           >
-            <div className="border-4 border-white p-6 md:p-8 rotate-1">
+            <div className="border-4 border-white p-6 md:p-8 rotate-1 bg-black/50 backdrop-blur-sm">
               <h3 className="font-heading text-3xl md:text-4xl text-neon-yellow uppercase mb-4">
-                5000+
+                10000+
               </h3>
               <p className="text-white text-sm md:text-base uppercase tracking-wider">
-                EXPECTED PARTICIPANTS
+                EXPECTED FOOTFALL
               </p>
             </div>
 
@@ -121,7 +136,7 @@ export const About = () => {
           {['COMPETE', 'CREATE', 'CELEBRATE'].map((word, index) => (
             <div
               key={word}
-              className="border-2 border-hot-pink p-8 text-center hover:bg-hot-pink transition-all duration-300 group"
+              className="border-2 border-hot-pink p-8 text-center hover:bg-hot-pink transition-all duration-300 group bg-black/30 backdrop-blur-sm"
               style={{ transform: `rotate(${index % 2 === 0 ? '1deg' : '-1deg'})` }}
             >
               <h4 className="font-heading text-3xl md:text-4xl text-white group-hover:text-black transition-colors">

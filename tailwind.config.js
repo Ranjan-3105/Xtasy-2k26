@@ -8,8 +8,8 @@ export default {
         'hot-pink': '#E6007E',
       },
       fontFamily: {
-        heading: ["Array", "sans-serif"],
-        headingWide: ["Array Wide", "sans-serif"],
+        heading: ["Bad Grunge", "sans-serif"],
+        headingWide: ["Bad Grunge", "sans-serif"],
         body: ["Space Grotesk", "sans-serif"],
       },
       animation: {

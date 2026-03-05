@@ -879,9 +879,10 @@ const defaultItems = [
 interface InfiniteMenuProps {
   items?: any[];
   scale?: number;
+  onActionClick?: (item: any) => void;
 }
 
-export default function InfiniteMenu({ items = [], scale = 1.0 }: InfiniteMenuProps) {
+export default function InfiniteMenu({ items = [], scale = 1.0, onActionClick }: InfiniteMenuProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [activeItem, setActiveItem] = useState<any>(null);
   const [isMoving, setIsMoving] = useState(false);
@@ -921,6 +922,10 @@ export default function InfiniteMenu({ items = [], scale = 1.0 }: InfiniteMenuPr
   }, [items, scale]);
 
   const handleButtonClick = () => {
+    if (onActionClick && activeItem) {
+      onActionClick(activeItem);
+      return;
+    }
     if (!activeItem?.link) return;
     if (activeItem.link.startsWith('http')) {
       window.open(activeItem.link, '_blank');

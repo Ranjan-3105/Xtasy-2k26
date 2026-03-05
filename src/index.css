@@ -2,28 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ================= ARRAY ================= */
+/* ================= BAD GRUNGE ================= */
 
 @font-face {
-  font-family: "Array";
-  src: url("./fonts/Array-Semibold.woff2") format("woff2");
-  font-weight: 600;
+  font-family: "Bad Grunge";
+  src: url("./fonts/bad_grunge/BAD GRUNGE.ttf") format("truetype");
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Array";
-  src: url("./fonts/Array-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Array Wide";
-  src: url("./fonts/Array-BoldWide.woff2") format("woff2");
-  font-weight: 700;
+  font-family: "Bad Grunge";
+  src: url("./fonts/bad_grunge/BAD GRUNGE.ttf") format("truetype");
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }

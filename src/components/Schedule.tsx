@@ -6,14 +6,14 @@ import guitar1 from '../assets/guitarElem1.png';
 
 const scheduleData = [
   {
-    day: 'DAY 1',
+    day: 'DAY 0',
     date: 'MARCH 17',
     events: [
       { time: 'TBD', name: 'BURNOUT (DANCE BATTLE)', highlight: true },
     ],
   },
   {
-    day: 'DAY 2',
+    day: 'DAY 1',
     date: 'MARCH 18',
     events: [
       { time: 'TBD', name: 'SINFONIETTA (SOLO SINGING)', highlight: true },
@@ -25,7 +25,7 @@ const scheduleData = [
     ],
   },
   {
-    day: 'DAY 3',
+    day: 'DAY 2',
     date: 'MARCH 19',
     events: [
       { time: 'TBD', name: 'DIGICLASH', highlight: true },
@@ -37,7 +37,7 @@ const scheduleData = [
     ],
   },
   {
-    day: 'DAY 4',
+    day: 'DAY 3',
     date: 'MARCH 20',
     events: [
       { time: 'TBD', name: 'BATTLE OF BANDS', highlight: true },
