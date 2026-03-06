@@ -1,1 +1,0 @@
-﻿src/components/MerchModel.tsx(7,11): error TS2339: Property 'scene' does not exist on type '(GLTF & ObjectMap) | (GLTF & ObjectMap)[]'.
