@@ -11,12 +11,14 @@ import {
   BookOpen,
   Landmark,
   Video,
-  ArrowRight
+  ArrowRight,
+  Camera,
+  Pen,
 } from 'lucide-react';
 import eye from '../assets/eye.png';
 import guitar from '../assets/guitarElem1.png';
 
-// Import event images for the data update
+// Import event images
 import burnoutImg from '../assets/events/Burnout.webp';
 import sinfoniettaImg from '../assets/events/Sinfonietta.webp';
 import relayArtImg from '../assets/events/Relay_art_challenge.webp';
@@ -38,134 +40,84 @@ import reelVisionImg from '../assets/events/Reel_vision.webp';
 import frontpageFrenzyImg from '../assets/events/FrontPageFrenzy.webp';
 import overthinkTankImg from '../assets/events/TheOverthinkTank.webp';
 
-const events = [
+interface EventItem {
+  title: string;
+  subtitle: string;
+  icon: React.ComponentType<any>;
+  color: string;
+  image: string;
+  link: string;
+}
+
+interface DayGroup {
+  day: string;
+  date: string;
+  accent: 'neon-yellow' | 'hot-pink';
+  events: EventItem[];
+}
+
+const timeline: DayGroup[] = [
   {
-    title: 'BURNOUT',
-    icon: Zap,
-    color: 'neon-yellow',
-    description: 'Dance Battle.',
-    image: burnoutImg,
-    link: 'https://docs.google.com/forms/d/e/1FAIpQLSfR7jSt_zoEDOWsjwQ7qvsmv7dqBA623yUNSUXnKrZM2OXV8Q/viewform',
-    date: '17 March 2026',
-    rotationClass: 'md:rotate-2'
+    day: 'DAY 0',
+    date: '17 MARCH',
+    accent: 'neon-yellow',
+    events: [
+      { title: 'BURNOUT', subtitle: 'The Dance Battle', icon: Zap, color: 'neon-yellow', image: burnoutImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSfR7jSt_zoEDOWsjwQ7qvsmv7dqBA623yUNSUXnKrZM2OXV8Q/viewform' },
+    ],
   },
   {
-    title: 'RELAY ART',
-    icon: Star,
-    color: 'white',
-    description: 'Paint. Pass. Prevail.',
-    image: relayArtImg,
-    link: 'https://docs.google.com/forms/d/e/1FAIpQLSc62QAUHhQFdo7jy-hMwRvbGJF9yMCEHe32U_YPTPYW8LLyrw/viewform?usp=header',
-    date: '18 March 2026',
-    rotationClass: 'md:rotate-1'
+    day: 'DAY 1',
+    date: '18 MARCH',
+    accent: 'hot-pink',
+    events: [
+      { title: 'GUESSWORK IN PROGRESS', subtitle: 'Themed Quiz', icon: MessageSquare, color: 'neon-yellow', image: guessworkImg, link: 'https://forms.gle/wk9euirFZ4xGkjvi9' },
+      { title: 'RELAY ART', subtitle: 'Team Painting Competition', icon: Star, color: 'white', image: relayArtImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSc62QAUHhQFdo7jy-hMwRvbGJF9yMCEHe32U_YPTPYW8LLyrw/viewform?usp=header' },
+      { title: 'SINFONIETTA', subtitle: 'Solo Singing Competition', icon: Music, color: 'hot-pink', image: sinfoniettaImg, link: 'https://forms.gle/Cpy3fD7xYr4XsD6e9' },
+      { title: 'CHAURAHA', subtitle: 'Nukkad Natak', icon: Users, color: 'neon-yellow', image: chaurahaImg, link: 'https://forms.gle/fh5erTx21nxxmdoz7' },
+      { title: 'NRUTYA NAIVEDYA', subtitle: 'Solo Odissi Dance Competition', icon: Zap, color: 'hot-pink', image: nrutyaImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSf-OUwRoDF_evjy82fgntrfP7vLvcxfBKWFdEDkDXXrxyypBw/viewform' },
+      { title: 'YUVA SANSAD', subtitle: 'Parliamentary Debate', icon: Landmark, color: 'white', image: yuvaImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSenWAPnUSU8mWU0UcYrgxHLiT4Zeq15jvBgnXTt_bALs6RaRQ/viewform' },
+      { title: 'FACTORY OF FRAMES', subtitle: 'Photography Workshop', icon: Camera, color: 'neon-yellow', image: fofImg, link: 'https://forms.gle/dzrxS3DeLW47BVAZ7' },
+      { title: 'REEL VISION', subtitle: 'Videography Workshop', icon: Video, color: 'hot-pink', image: reelVisionImg, link: 'https://forms.gle/YFxcYHdq1E27wAm7A' },
+      { title: 'FRONTPAGE FRENZY', subtitle: 'Newspaper Frontpage Design Competition', icon: BookOpen, color: 'white', image: frontpageFrenzyImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSeEbx2tclHZGgYhCkkomMkvNSnCtUHqaXQrHK-YclS9ffEogA/viewform' },
+    ],
   },
   {
-    title: 'CHAURAHA',
-    icon: Users,
-    color: 'neon-yellow',
-    description: 'Nukkad.',
-    image: chaurahaImg,
-    link: 'https://forms.gle/fh5erTx21nxxmdoz7',
-    date: '18 March 2026',
-    rotationClass: 'md:-rotate-2'
+    day: 'DAY 2',
+    date: '19 MARCH',
+    accent: 'neon-yellow',
+    events: [
+      { title: 'MDMA', subtitle: 'The Xtasy Quiz', icon: MessageSquare, color: 'neon-yellow', image: mdmaImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSdBogrVgIM3cLvId5rS96Mhw9QOCwTMyyRQs8QRTSN2kvXuHg/viewform' },
+      { title: 'QUESTIONABLE', subtitle: 'The NSFW Quiz', icon: MessageSquare, color: 'hot-pink', image: questionableImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSdBogrVgIM3cLvId5rS96Mhw9QOCwTMyyRQs8QRTSN2kvXuHg/viewform' },
+      { title: 'UNISON', subtitle: 'Group Dance Competition', icon: Zap, color: 'white', image: unisonImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSfmPc36pjPqZq3Ky8X-T4taUIPp8GRvhnVD09-Hjqbs-WvhNw/viewform' },
+      { title: 'RANGAMANCH', subtitle: 'Monoact / Duoact Competition', icon: Users, color: 'neon-yellow', image: rangamanchImg, link: 'https://forms.gle/fh5erTx21nxxmdoz7' },
+      { title: 'CINEFACTORY', subtitle: 'Short Film Making Competition', icon: Video, color: 'hot-pink', image: cinefactoryImg, link: 'https://forms.gle/s6vTmeKPX42WNxz5A' },
+      { title: 'NEWSPRINT', subtitle: 'News Reporting Competition', icon: BookOpen, color: 'white', image: newsprintImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSe37ou2mWrBnFlYmyLE11W6WCkpvsXkVfPOX-g4JNZG-lY1Sw/viewform?usp=header' },
+      { title: 'DIGICLASH', subtitle: 'Digital Art & Graphic Design Competition', icon: Pen, color: 'neon-yellow', image: digiclashImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSdojDYOyN0DuTCrCQXuekE-htGWu52DYXqNZcucuNrSLapmpg/viewform?usp=header' },
+      { title: 'SKETCHCLASH', subtitle: 'Sketch Competition', icon: Star, color: 'hot-pink', image: sketchclashImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSdojDYOyN0DuTCrCQXuekE-htGWu52DYXqNZcucuNrSLapmpg/viewform?usp=header' },
+      { title: 'OVERTHINKTANK', subtitle: 'Unpopular Opinion Courtroom', icon: Users, color: 'white', image: overthinkTankImg, link: 'http://docs.google.com/forms/d/e/1FAIpQLSenWAPnUSU8mWU0UcYrgxHLiT4Zeq15jvBgnXTt_bALs6RaRQ/viewform' },
+    ],
   },
   {
-    title: 'UNISON',
-    icon: Zap,
-    color: 'hot-pink',
-    description: 'Group Dance Competition',
-    image: unisonImg,
-    link: 'https://docs.google.com/forms/d/e/1FAIpQLSfmPc36pjPqZq3Ky8X-T4taUIPp8GRvhnVD09-Hjqbs-WvhNw/viewform',
-    date: '20 March 2026',
-    rotationClass: 'md:rotate-1'
+    day: 'DAY 3',
+    date: '20 MARCH',
+    accent: 'hot-pink',
+    events: [
+      { title: 'BATTLE OF BANDS', subtitle: 'When Music Meets Mayhem', icon: Music, color: 'hot-pink', image: bobImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSeBfNEo3Qd-lteFVQldzYQXMBTnL7Bb4j3Qy0IHp0J0rhYclg/viewform' },
+    ],
   },
-  {
-    title: 'MDMA',
-    icon: MessageSquare,
-    color: 'white',
-    description: 'The Xtasy quiz.',
-    image: mdmaImg,
-    link: 'https://docs.google.com/forms/d/e/1FAIpQLSdBogrVgIM3cLvId5rS96Mhw9QOCwTMyyRQs8QRTSN2kvXuHg/viewform',
-    date: '19 March 2026',
-    rotationClass: 'md:-rotate-1'
-  },
-  {
-    title: 'NEWSPRINT',
-    icon: BookOpen,
-    color: 'neon-yellow',
-    description: 'Live Reporting event.',
-    image: newsprintImg,
-    link: 'https://docs.google.com/forms/d/e/1FAIpQLSe37ou2mWrBnFlYmyLE11W6WCkpvsXkVfPOX-g4JNZG-lY1Sw/viewform?usp=header',
-    date: '19 March 2026',
-    rotationClass: 'md:rotate-2'
-  },
-  {
-    title: 'BATTLE OF BANDS',
-    icon: Music,
-    color: 'hot-pink',
-    description: 'Where music meets mayhem !',
-    image: bobImg,
-    link: 'https://docs.google.com/forms/d/e/1FAIpQLSeBfNEo3Qd-lteFVQldzYQXMBTnL7Bb4j3Qy0IHp0J0rhYclg/viewform',
-    date: '20 March 2026',
-    rotationClass: 'md:-rotate-1'
-  },
-  {
-    title: 'YUVA SANSAD',
-    icon: Landmark,
-    color: 'white',
-    description: 'Parliamentary Debate.',
-    image: yuvaImg,
-    link: 'https://docs.google.com/forms/d/e/1FAIpQLSenWAPnUSU8mWU0UcYrgxHLiT4Zeq15jvBgnXTt_bALs6RaRQ/viewform',
-    date: '20 March 2026',
-    rotationClass: 'md:rotate-1'
-  },
-  {
-    title: 'CINEFACTORY',
-    icon: Video,
-    color: 'neon-yellow',
-    description: 'Short-Film Competition',
-    image: cinefactoryImg,
-    link: 'https://forms.gle/s6vTmeKPX42WNxz5A',
-    date: '20 March 2026',
-    rotationClass: 'md:-rotate-2'
-  },
-  { title: 'SINFONIETTA', icon: Music, color: 'white', description: 'Solo Singing Competition.', image: sinfoniettaImg, link: 'https://forms.gle/Cpy3fD7xYr4XsD6e9', date: '18 March 2026', rotationClass: 'md:rotate-1' },
-  { title: 'NRUTYA NAIVEDYA', icon: Zap, color: 'hot-pink', description: 'Classical Dance Competition.', image: nrutyaImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSf-OUwRoDF_evjy82fgntrfP7vLvcxfBKWFdEDkDXXrxyypBw/viewform', date: '18 March 2026', rotationClass: 'md:rotate-2' },
-  { title: 'QUESTIONABLE', icon: MessageSquare, color: 'white', description: 'The NSFW Quiz.', image: questionableImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSdBogrVgIM3cLvId5rS96Mhw9QOCwTMyyRQs8QRTSN2kvXuHg/viewform', date: '18 March 2026', rotationClass: 'md:-rotate-1' },
-  { title: 'GUESSWORK', icon: Zap, color: 'neon-yellow', description: 'Themed quiz.', image: guessworkImg, link: 'https://forms.gle/wk9euirFZ4xGkjvi9', date: '18 March 2026', rotationClass: 'md:rotate-1' },
-  { title: 'DIGICLASH', icon: Star, color: 'white', description: 'Digital Illustration and Graphics design.', image: digiclashImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSdojDYOyN0DuTCrCQXuekE-htGWu52DYXqNZcucuNrSLapmpg/viewform?usp=header', date: '19 March 2026', rotationClass: 'md:-rotate-2' },
-  { title: 'SKETCHCLASH', icon: Zap, color: 'neon-yellow', description: 'Art competition', image: sketchclashImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSdojDYOyN0DuTCrCQXuekE-htGWu52DYXqNZcucuNrSLapmpg/viewform?usp=header', date: '19 March 2026', rotationClass: 'md:rotate-1' },
-  { title: 'RANGAMANCH', icon: Users, color: 'hot-pink', description: 'Drama Competition', image: rangamanchImg, link: 'https://forms.gle/fh5erTx21nxxmdoz7', date: '19 March 2026', rotationClass: 'md:-rotate-1' },
-  { title: 'FACTORY OF FRAMES', icon: BookOpen, color: 'white', description: 'Photography Competition', image: fofImg, link: 'https://forms.gle/dzrxS3DeLW47BVAZ7', date: '19 March 2026', rotationClass: 'md:rotate-2' },
-  { title: 'REEL VISION', icon: Zap, color: 'neon-yellow', description: 'Short Video making competition', image: reelVisionImg, link: 'https://forms.gle/YFxcYHdq1E27wAm7A', date: '19 March 2026', rotationClass: 'md:-rotate-2' },
-  { title: 'FRONTPAGE FRENZY', icon: MessageSquare, color: 'white', description: 'Newspaper frontpage designing competition.', image: frontpageFrenzyImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSeEbx2tclHZGgYhCkkomMkvNSnCtUHqaXQrHK-YclS9ffEogA/viewform', date: '19 March 2026', rotationClass: 'md:rotate-1' },
-  { title: 'OVERTHINK TANK', icon: Users, color: 'hot-pink', description: 'Defend The Undefendable.', image: overthinkTankImg, link: 'http://docs.google.com/forms/d/e/1FAIpQLSenWAPnUSU8mWU0UcYrgxHLiT4Zeq15jvBgnXTt_bALs6RaRQ/viewform', date: '20 March 2026', rotationClass: 'md:-rotate-1' },
 ];
 
 export const Events = () => {
   const { ref, isInView } = useScrollDepth({ threshold: 0.05 });
-  const [selectedEvent, setSelectedEvent] = useState<any>(null);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-      },
-    },
-  };
+  const [selectedEvent, setSelectedEvent] = useState<EventItem | null>(null);
 
   return (
     <>
       <section
         ref={ref}
         className="min-h-screen bg-black py-16 md:py-24 px-4 md:px-8 lg:px-16 relative overflow-hidden"
-        style={{
-          perspective: '1500px',
-          transformStyle: 'preserve-3d',
-        }}
       >
+        {/* Decorative elements */}
         <div className="hidden md:block absolute top-20 md:top-40 right-2 md:right-5 w-20 h-20 md:w-32 md:h-32 opacity-40 pointer-events-none z-0">
           <motion.img
             src={guitar}
@@ -187,7 +139,8 @@ export const Events = () => {
           />
         </div>
 
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-6xl mx-auto relative z-10">
+          {/* Section Header */}
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
@@ -202,17 +155,100 @@ export const Events = () => {
             <div className="w-32 md:w-48 h-2 bg-neon-yellow mt-4 md:mt-6" />
           </motion.div>
 
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate={isInView ? 'visible' : 'hidden'}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 pb-8 md:pb-0"
-          >
-            {events.map((event, index) => (
-              <EventCard key={event.title} event={event} index={index} onClick={() => setSelectedEvent(event)} />
-            ))}
-          </motion.div>
+          {/* Timeline */}
+          <div className="relative">
+            {/* Vertical line */}
+            <div className="absolute left-[18px] md:left-[22px] top-0 bottom-0 w-[2px] bg-white/10" />
 
+            <div className="space-y-12 md:space-y-16">
+              {timeline.map((group, groupIndex) => (
+                <motion.div
+                  key={group.day}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: groupIndex * 0.1 }}
+                  viewport={{ once: true, margin: '-50px' }}
+                  className="relative"
+                >
+                  {/* Day Badge */}
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className={`relative z-10 w-[38px] h-[38px] md:w-[46px] md:h-[46px] rounded-full flex items-center justify-center border-[3px] ${group.accent === 'neon-yellow' ? 'border-neon-yellow bg-neon-yellow/10' : 'border-hot-pink bg-hot-pink/10'
+                      }`}>
+                      <div className={`w-3 h-3 rounded-full ${group.accent === 'neon-yellow' ? 'bg-neon-yellow' : 'bg-hot-pink'
+                        }`} />
+                    </div>
+                    <div>
+                      <h3 className={`font-headingWide text-2xl md:text-4xl uppercase tracking-wider ${group.accent === 'neon-yellow' ? 'text-neon-yellow' : 'text-hot-pink'
+                        }`}>
+                        {group.day}
+                      </h3>
+                      <p className="text-white/50 text-xs md:text-sm font-bold uppercase tracking-[0.3em]">
+                        {group.date}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Event items */}
+                  <div className="ml-[18px] md:ml-[22px] pl-8 md:pl-10 border-l-[2px] border-white/5 space-y-3">
+                    {group.events.map((event, eventIndex) => {
+                      const Icon = event.icon;
+                      return (
+                        <motion.div
+                          key={event.title}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.4, delay: eventIndex * 0.05 }}
+                          viewport={{ once: true }}
+                          onClick={() => setSelectedEvent(event)}
+                          className="group relative flex items-center gap-4 p-3 md:p-4 cursor-pointer rounded-sm
+             bg-white/[0.02] hover:bg-white/[0.06] border border-white/5 hover:border-white/15
+             transition-all duration-300"
+                        >
+                          {/* Dot connector */}
+                          <div
+                            className={`absolute -left-[calc(2rem+5px)] md:-left-[calc(2.5rem+5px)] w-[8px] h-[8px] rounded-full ${event.color === "neon-yellow"
+                                ? "bg-neon-yellow"
+                                : event.color === "hot-pink"
+                                  ? "bg-hot-pink"
+                                  : "bg-white"
+                              } opacity-40 group-hover:opacity-100 transition-opacity`}
+                          />
+
+                          {/* Icon */}
+                          <div
+                            className={`w-9 h-9 md:w-10 md:h-10 rounded flex items-center justify-center flex-shrink-0 ${event.color === "neon-yellow"
+                                ? "bg-neon-yellow/10 text-neon-yellow"
+                                : event.color === "hot-pink"
+                                  ? "bg-hot-pink/10 text-hot-pink"
+                                  : "bg-white/10 text-white"
+                              }`}
+                          >
+                            <Icon className="w-4 h-4 md:w-5 md:h-5" />
+                          </div>
+
+                          {/* Text */}
+                          <div className="flex-1 min-w-0">
+                            <h4 className="font-headingWide text-lg md:text-xl text-white uppercase tracking-wider group-hover:text-neon-yellow transition-colors truncate">
+                              {event.title}
+                            </h4>
+
+                            <p className="text-white/40 text-xs md:text-sm font-body truncate">
+                              {event.subtitle}
+                            </p>
+                          </div>
+
+                          {/* Arrow */}
+                          <ArrowRight className="w-4 h-4 text-white/20 group-hover:text-white/60 group-hover:translate-x-1 transition-all flex-shrink-0" />
+                        </motion.div>
+                      );
+                    })}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Browse All Events CTA */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -245,7 +281,7 @@ export const Events = () => {
         <div className="hidden md:block absolute bottom-20 left-10 w-64 h-64 bg-neon-yellow opacity-10 blur-[120px] rounded-full" />
       </section>
 
-      {/* Side Panel — placed OUTSIDE <section> to avoid perspective/transform breaking position:fixed */}
+      {/* Side Panel */}
       <motion.div
         initial={{ x: '100%' }}
         animate={{ x: selectedEvent ? 0 : '100%' }}
@@ -283,12 +319,8 @@ export const Events = () => {
                 className="h-1 bg-neon-yellow mb-4"
               />
 
-              <p className="text-white/60 text-sm uppercase tracking-[0.2em] italic mb-2">
-                {selectedEvent.date}
-              </p>
-
               <p className="text-white/80 text-base mb-6">
-                {selectedEvent.description}
+                {selectedEvent.subtitle}
               </p>
 
               <a
@@ -320,115 +352,5 @@ export const Events = () => {
         )}
       </motion.div>
     </>
-  );
-};
-
-interface EventCardProps {
-  event: typeof events[0];
-  index: number;
-  onClick: () => void;
-}
-
-const EventCard = ({ event, onClick }: EventCardProps) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const { ref, isInView, scrollProgress } = useScrollDepth({ threshold: 0.5 });
-  const Icon = event.icon;
-
-  const itemVariants = {
-    hidden: {
-      opacity: 0,
-      y: 30,
-      scale: 0.95,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
-
-  const getBorderColor = () => {
-    switch (event.color) {
-      case 'neon-yellow':
-        return 'border-neon-yellow';
-      case 'hot-pink':
-        return 'border-hot-pink';
-      default:
-        return 'border-white';
-    }
-  };
-
-  const getTextColor = () => {
-    switch (event.color) {
-      case 'neon-yellow':
-        return 'text-neon-yellow';
-      case 'hot-pink':
-        return 'text-hot-pink';
-      default:
-        return 'text-white';
-    }
-  };
-
-  return (
-    <motion.div
-      ref={ref}
-      variants={itemVariants}
-      className={`group relative w-full will-change-transform ${event.rotationClass}`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      onClick={onClick}
-    >
-      <motion.div
-        className={`border-2 md:border-4 ${getBorderColor()} bg-[#080808]/80 backdrop-blur-md p-6 md:p-8 relative overflow-hidden cursor-pointer h-full transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.05)]`}
-        whileHover={{
-          scale: 1.02,
-          y: -5,
-          transition: { duration: 0.3 },
-        }}
-        animate={{
-          scale: isInView ? 1 : 0.95,
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black opacity-50" />
-
-        <motion.div
-          className="absolute top-4 right-4"
-          whileHover={{ rotate: 360 }}
-          transition={{ duration: 0.6 }}
-        >
-          <Icon className={`w-10 h-10 md:w-12 md:h-12 ${getTextColor()}`} />
-        </motion.div>
-
-        <div className="relative z-10 mt-2 md:mt-0">
-          <h3 className={`font-headingWide text-xl md:text-3xl ${getTextColor()} uppercase mb-3 md:mb-4 leading-tight tracking-wider`}>
-            {event.title}
-          </h3>
-
-          <div className={`w-12 md:w-16 h-1 ${event.color === 'white' ? 'bg-white' : `bg-${event.color}`} mb-4 md:mb-6 transition-all duration-300 ${isHovered ? 'w-full' : 'w-16'}`} />
-
-          <p className="text-white/60 text-xs md:text-sm font-body uppercase tracking-[0.2em] mb-4 italic">
-            {event.date}
-          </p>
-
-          <p className="text-white text-sm md:text-base font-body mb-6 line-clamp-2">
-            {event.description}
-          </p>
-        </div>
-
-        <motion.div
-          className={`absolute bottom-0 left-0 w-full h-1 ${event.color === 'white' ? 'bg-white' : `bg-${event.color}`}`}
-          initial={{ scaleX: 0 }}
-          whileHover={{ scaleX: 1 }}
-          transition={{ duration: 0.4 }}
-        />
-      </motion.div>
-
-      <div className={`absolute inset-0 border-2 md:border-4 ${getBorderColor()} -z-10 hidden md:block`}
-        style={{ transform: 'translate(8px, 8px)' }}
-      />
-    </motion.div>
   );
 };

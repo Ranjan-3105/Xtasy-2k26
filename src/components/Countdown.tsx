@@ -38,7 +38,7 @@ export const Countdown = () => {
       className="flex flex-col items-center justify-center mt-2 relative z-20"
     >
       <div className="text-white text-lg md:text-2xl font-bold uppercase tracking-[0.2em] mb-7 font-headingWide" style={{ textShadow: '2px 2px 0px #E6007E' }}>
-        TIME TO <span className="text-neon-yellow">XTASY</span>
+        FUNK THE <span className="text-neon-yellow">RULES</span>
       </div>
       <div className="flex flex-nowrap items-center justify-center gap-1 sm:gap-2 md:gap-3 pb-4 text-xs sm:text-base">
         <TimeUnit value={timeLeft.days} label="DAYS" />

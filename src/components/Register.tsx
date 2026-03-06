@@ -86,11 +86,11 @@ export const Register = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => {
-              window.open('https://forms.google.com', '_blank');
+              window.open('https://drive.google.com/file/d/1E1sIhPTRkmCO4k-P0Y1K_dBGlqpDvGcL/view?usp=drivesdk', '_blank');
             }}
           >
             <span className="relative z-10 flex items-center gap-4 text-neon-yellow">
-              REGISTER NOW
+              BROCHURE
               <ArrowRight className="w-8 h-8" />
             </span>
 

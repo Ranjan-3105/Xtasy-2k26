@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import logo from '../assets/Xtasy_Logo.png';
+import logo from '../assets/XTASY_TRANSPARENT_white.png';
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -36,9 +36,8 @@ export const Navbar = () => {
         }`}
     >
       <div className="flex items-center gap-3 relative z-50">
-        <img src={logo} alt="Xtasy Logo" className="h-10 w-auto object-contain" />
-        <Link to="/" onClick={() => setIsOpen(false)} className="font-heading text-2xl md:text-4xl text-neon-yellow hover:text-white transition-colors uppercase tracking-wider drop-shadow-[0_0_8px_rgba(254,234,7,0.5)]">
-          XTASY
+        <Link to="/" onClick={() => setIsOpen(false)}>
+          <img src={logo} alt="Xtasy Logo" className="h-7 w-auto object-contain" />
         </Link>
       </div>
 

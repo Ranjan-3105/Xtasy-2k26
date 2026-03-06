@@ -12,8 +12,8 @@ import { Mail, MapPin, Phone, Instagram } from 'lucide-react';
 const About = lazy(() => import('./components/About').then(module => ({ default: module.About })));
 const Events = lazy(() => import('./components/Events').then(module => ({ default: module.Events })));
 const Gallery = lazy(() => import('./components/Gallery').then(module => ({ default: module.Gallery })));
-const GuessTheStar = lazy(() => import('./components/GuessTheStar').then(module => ({ default: module.GuessTheStar })));
-const Schedule = lazy(() => import('./components/Schedule').then(module => ({ default: module.Schedule })));
+// const GuessTheStar = lazy(() => import('./components/GuessTheStar').then(module => ({ default: module.GuessTheStar })));
+// const Schedule = lazy(() => import('./components/Schedule').then(module => ({ default: module.Schedule })));
 const Register = lazy(() => import('./components/Register').then(module => ({ default: module.Register })));
 import { TornEdge } from './components/TornEdge';
 
@@ -34,9 +34,9 @@ function HomePage() {
         <Suspense fallback={<div className="min-h-screen bg-black" />}>
           <div id="about"><About /></div>
           <div id="events"><Events /></div>
+          {/* <Schedule /> */}
           <div id="gallery"><Gallery /></div>
-          <GuessTheStar />
-          <Schedule />
+          {/* <GuessTheStar /> */}
           <Register />
         </Suspense>
         
@@ -91,7 +91,8 @@ function HomePage() {
                 <Link to="/events" className="hover:text-hot-pink transition-colors">Events</Link>
                 <Link to="/about" className="hover:text-hot-pink transition-colors">About</Link>
                 <Link to="/sponsors" className="hover:text-hot-pink transition-colors">Sponsors</Link>
-                <a href="https://forms.google.com" target="_blank" rel="noopener noreferrer" className="hover:text-hot-pink transition-colors text-neon-yellow font-bold">Register Now</a>
+                <Link to="/merch" className="hover:text-hot-pink transition-colors">Merch</Link>
+                {/* <a href="https://forms.google.com" target="_blank" rel="noopener noreferrer" className="hover:text-hot-pink transition-colors text-neon-yellow font-bold">Register Now</a> */}
               </div>
             </div>
           </div>

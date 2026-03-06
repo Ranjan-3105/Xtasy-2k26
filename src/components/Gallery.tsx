@@ -3,23 +3,19 @@ import { useScrollDepth } from '../hooks/useScrollDepth';
 import { Camera } from 'lucide-react';
 
 import img1 from '../assets/gallery1.jpeg';
-import img2 from '../assets/AcrossTheSpiderVerse 1.png';
-import img3 from '../assets/gallery2.jpeg';
-import img4 from '../assets/PARTHO_3 1.png';
-import img5 from '../assets/gallery3.jpeg';
-import img6 from '../assets/PF 4.png';
-import img7 from '../assets/galler4.jpeg';
-import img8 from '../assets/gallery5.jpeg';
+import img2 from '../assets/gallery2.jpeg';
+import img3 from '../assets/gallery3.jpeg';
+import img4 from '../assets/galler4.jpeg';
+import img5 from '../assets/gallery5.jpeg';
+import img6 from '../assets/gallery6.jpeg';
 
 const galleryImages = [
   { id: 1, src: img1, height: 'h-64', overlay: 'neon-yellow' },
-  { id: 2, src: img2, height: 'h-80', overlay: 'hot-pink' },
-  { id: 3, src: img3, height: 'h-72', overlay: 'neon-yellow' },
-  { id: 4, src: img4, height: 'h-64', overlay: 'hot-pink' },
-  { id: 5, src: img5, height: 'h-96', overlay: 'neon-yellow' },
+  { id: 2, src: img2, height: 'h-72', overlay: 'neon-yellow' },
+  { id: 3, src: img3, height: 'h-96', overlay: 'neon-yellow' },
+  { id: 4, src: img4, height: 'h-80', overlay: 'neon-yellow' },
+  { id: 5, src: img5, height: 'h-64', overlay: 'hot-pink' },
   { id: 6, src: img6, height: 'h-72', overlay: 'hot-pink' },
-  { id: 7, src: img7, height: 'h-80', overlay: 'neon-yellow' },
-  { id: 8, src: img8, height: 'h-64', overlay: 'hot-pink' },
 ];
 
 export const Gallery = () => {
@@ -49,7 +45,7 @@ export const Gallery = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {galleryImages.map((image, index) => (
             <GalleryItem key={image.id} image={image} index={index} />
           ))}
@@ -81,17 +77,16 @@ const GalleryItem = ({ image, index }: GalleryItemProps) => {
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.3 }}
       >
-        <img 
-          loading="lazy" 
-          src={image.src} 
-          alt={`Gallery ${image.id}`} 
-          className="absolute inset-0 w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500" 
+        <img
+          loading="lazy"
+          src={image.src}
+          alt={`Gallery ${image.id}`}
+          className="absolute inset-0 w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500"
         />
 
         <motion.div
-          className={`absolute inset-0 ${
-            image.overlay === 'neon-yellow' ? 'bg-neon-yellow' : 'bg-hot-pink'
-          } mix-blend-multiply opacity-0 group-hover:opacity-60 transition-opacity duration-300 z-10`}
+          className={`absolute inset-0 ${image.overlay === 'neon-yellow' ? 'bg-neon-yellow' : 'bg-hot-pink'
+            } mix-blend-multiply opacity-0 group-hover:opacity-60 transition-opacity duration-300 z-10`}
         />
 
         <motion.div
@@ -113,9 +108,8 @@ const GalleryItem = ({ image, index }: GalleryItemProps) => {
             repeatDelay: 1,
           }}
         >
-          <div className={`w-8 h-8 ${
-            image.overlay === 'neon-yellow' ? 'bg-neon-yellow' : 'bg-hot-pink'
-          }`} />
+          <div className={`w-8 h-8 ${image.overlay === 'neon-yellow' ? 'bg-neon-yellow' : 'bg-hot-pink'
+            }`} />
         </motion.div>
       </motion.div>
 
