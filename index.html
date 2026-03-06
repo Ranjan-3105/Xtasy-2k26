@@ -5,21 +5,36 @@
     <link rel="icon" type="image/png" href="/src/assets/Xtasy_Logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>XTASY 2026 - Annual Cultural Fest</title>
-    <meta name="description" content="Join the chaos. XTASY 2026 - Three days of music, dance, coding, gaming, fashion, and more. March 15-17, 2026." />
+    <meta
+      name="description"
+      content="Join the chaos. XTASY 2026 - Three days of music, dance, coding, gaming, fashion, and more. March 15-17, 2026."
+    />
     <!-- Preload Critical Assets -->
-    <link rel="preload" as="image" href="/src/assets/XTASY_TRANSPARENT_RED.png" />
-    
+    <link
+      rel="preload"
+      as="image"
+      href="/src/assets/XTASY_TRANSPARENT_RED.png"
+    />
+
     <!-- Preconnects -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <meta property="og:title" content="XTASY 2026 - Annual Cultural Fest" />
-    <meta property="og:description" content="Where chaos meets creativity. Join us for three days of rebellion." />
-    <meta property="og:image" content="https://bolt.new/static/og_default.png" />
+    <meta
+      property="og:description"
+      content="Where chaos meets creativity. Join us for three days of rebellion."
+    />
+    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="XTASY 2026 - Annual Cultural Fest" />
-    <meta name="twitter:description" content="Where chaos meets creativity. Join us for three days of rebellion." />
-    <meta name="twitter:image" content="https://bolt.new/static/og_default.png" />
+    <meta
+      name="twitter:description"
+      content="Where chaos meets creativity. Join us for three days of rebellion."
+    />
+    <meta name="twitter:image" content="/og-image.png" />
 
     <style>
       /* Pure CSS Loader Styling (Zero-JS blocking) */
@@ -31,7 +46,9 @@
         align-items: center;
         justify-content: center;
         z-index: 999999;
-        transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+        transition:
+          opacity 0.5s ease-out,
+          visibility 0.5s ease-out;
       }
 
       .logo-container {
@@ -59,14 +76,20 @@
         width: 100%;
         height: auto;
         /* Progressive fill from bottom to top using clip-path */
-        clip-path: inset(100% 0 0 0); 
+        clip-path: inset(100% 0 0 0);
         animation: fillLogo 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
       }
 
       @keyframes fillLogo {
-        0% { clip-path: inset(100% 0 0 0); }
-        50% { clip-path: inset(40% 0 0 0); }
-        100% { clip-path: inset(0 0 0 0); }
+        0% {
+          clip-path: inset(100% 0 0 0);
+        }
+        50% {
+          clip-path: inset(40% 0 0 0);
+        }
+        100% {
+          clip-path: inset(0 0 0 0);
+        }
       }
 
       /* Glow effect pulse */
@@ -77,14 +100,24 @@
         transform: translate(-50%, -50%);
         width: 100%;
         height: 100%;
-        background: radial-gradient(circle, rgba(255,20,147,0.3) 0%, rgba(0,0,0,0) 70%);
+        background: radial-gradient(
+          circle,
+          rgba(255, 20, 147, 0.3) 0%,
+          rgba(0, 0, 0, 0) 70%
+        );
         animation: pulseGlow 2s infinite alternate;
         z-index: -1;
       }
 
       @keyframes pulseGlow {
-        0% { opacity: 0.5; transform: translate(-50%, -50%) scale(0.8); }
-        100% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); }
+        0% {
+          opacity: 0.5;
+          transform: translate(-50%, -50%) scale(0.8);
+        }
+        100% {
+          opacity: 1;
+          transform: translate(-50%, -50%) scale(1.2);
+        }
       }
 
       /* Utility class added by React to fade out the loader */
@@ -100,8 +133,16 @@
     <div id="initial-loader">
       <div class="logo-container">
         <div class="loader-glow"></div>
-        <img src="/src/assets/XTASY_TRANSPARENT_RED.png" alt="Loading Base" class="logo-base" />
-        <img src="/src/assets/XTASY_TRANSPARENT_RED.png" alt="Loading Fill" class="logo-fill" />
+        <img
+          src="/src/assets/XTASY_TRANSPARENT_RED.png"
+          alt="Loading Base"
+          class="logo-base"
+        />
+        <img
+          src="/src/assets/XTASY_TRANSPARENT_RED.png"
+          alt="Loading Fill"
+          class="logo-fill"
+        />
       </div>
     </div>
 

@@ -22,26 +22,168 @@ import yuvaImg from '../assets/events/Yuva_sansad.webp';
 import cinefactoryImg from '../assets/events/Cinefactory.webp';
 import fofImg from '../assets/events/Factory_of_frames.webp';
 import reelVisionImg from '../assets/events/Reel_vision.webp';
+import frontpageFrenzyImg from '../assets/events/FrontPageFrenzy.webp';
+import overthinkTankImg from '../assets/events/TheOverthinkTank.webp';
 
 const items = [
-  { image: burnoutImg, link: 'https://forms.gle/5gUebDc1uUkm9LvB7', title: 'BURNOUT', description: '17 March 2026' },
-  { image: sinfoniettaImg, link: 'https://forms.gle/rJmtrQNWWPG9exwk8', title: 'SINFONIETTA', description: '18 March 2026' },
-  { image: relayArtImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSc62QAUHhQFdo7jy-hMwRvbGJF9yMCEHe32U_YPTPYW8LLyrw/viewform?usp=header', title: 'RELAY ART', description: '18 March 2026' },
-  { image: chaurahaImg, link: '#', title: 'CHAURAHA', description: '18 March 2026' },
-  { image: nrutyaImg, link: 'https://forms.gle/fRJNPna72HkMeidh9', title: 'NRUTYA', description: '18 March 2026' },
-  { image: questionableImg, link: 'https://forms.gle/wk9euirFZ4xGkjvi9', title: 'QUESTIONABLE', description: '18 March 2026' },
-  { image: guessworkImg, link: 'https://forms.gle/wk9euirFZ4xGkjvi9', title: 'GUESSWORK', description: '18 March 2026' },
-  { image: digiclashImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSdojDYOyN0DuTCrCQXuekE-htGWu52DYXqNZcucuNrSLapmpg/viewform?usp=header', title: 'DIGICLASH', description: '19 March 2026' },
-  { image: sketchclashImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSdojDYOyN0DuTCrCQXuekE-htGWu52DYXqNZcucuNrSLapmpg/viewform?usp=header', title: 'SKETCHCLASH', description: '19 March 2026' },
-  { image: rangamanchImg, link: '#', title: 'RANGAMANCH', description: '19 March 2026' },
-  { image: fofImg, link: 'https://forms.gle/dzrxS3DeLW47BVAZ7', title: 'FACTORY OF FRAMES', description: '19 March 2026' },
-  { image: mdmaImg, link: 'https://forms.gle/SAPat5UtnUrGwohG7', title: 'MDMA', description: '19 March 2026' },
-  { image: reelVisionImg, link: 'https://forms.gle/YFxcYHdq1E27wAm7A', title: 'REEL VISION', description: '19 March 2026' },
-  { image: newsprintImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSe37ou2mWrBnFlYmyLE11W6WCkpvsXkVfPOX-g4JNZG-lY1Sw/viewform?usp=header', title: 'NEWSPRINT', description: '19 March 2026' },
-  { image: bobImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSenWAPnUSU8mWU0UcYrgxHLiT4Zeq15jvBgnXTt_bALs6RaRQ/viewform?usp=header', title: 'BATTLE OF BANDS', description: '20 March 2026' },
-  { image: unisonImg, link: 'https://forms.gle/waLV4rjXXyfDKyaT7', title: 'UNISON', description: '20 March 2026' },
-  { image: yuvaImg, link: 'https://forms.gle/Cpy3fD7xYr4XsD6e9', title: 'YUVA SANSAD', description: '20 March 2026' },
-  { image: cinefactoryImg, link: 'https://forms.gle/s6vTmeKPX42WNxz5A', title: 'CINEFACTORY', description: '20 March 2026' },
+  {
+    image: burnoutImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSfR7jSt_zoEDOWsjwQ7qvsmv7dqBA623yUNSUXnKrZM2OXV8Q/viewform',
+    title: 'BURNOUT',
+    description: 'Dance Battle.',
+    date: '17 March 2026'
+  },
+
+  {
+    image: sinfoniettaImg,
+    link: 'https://forms.gle/Cpy3fD7xYr4XsD6e9',
+    title: 'SINFONIETTA',
+    description: 'Solo Singing Competition.',
+    date: '18 March 2026'
+  },
+
+  {
+    image: relayArtImg,
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSc62QAUHhQFdo7jy-hMwRvbGJF9yMCEHe32U_YPTPYW8LLyrw/viewform?usp=header',
+    title: 'RELAY ART',
+    description: 'Paint. Pass. Prevail.',
+    date: '18 March 2026'
+  },
+
+  {
+    image: chaurahaImg,
+    link: 'https://forms.gle/fh5erTx21nxxmdoz7',
+    title: 'CHAURAHA',
+    description: 'Nukkad.',
+    date: '18 March 2026'
+  },
+
+  {
+    image: nrutyaImg,
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSf-OUwRoDF_evjy82fgntrfP7vLvcxfBKWFdEDkDXXrxyypBw/viewform',
+    title: 'NRUTYA NAIVEDYA',
+    description: 'Classical Dance Competition.',
+    date: '18 March 2026'
+  },
+
+  {
+    image: questionableImg,
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSdBogrVgIM3cLvId5rS96Mhw9QOCwTMyyRQs8QRTSN2kvXuHg/viewform',
+    title: 'QUESTIONABLE',
+    description: 'The NSFW Quiz.',
+    date: '18 March 2026'
+  },
+
+  {
+    image: guessworkImg,
+    link: 'https://forms.gle/wk9euirFZ4xGkjvi9',
+    title: 'GUESSWORK',
+    description: 'Themed quiz.',
+    date: '18 March 2026'
+  },
+
+  {
+    image: digiclashImg,
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSdojDYOyN0DuTCrCQXuekE-htGWu52DYXqNZcucuNrSLapmpg/viewform?usp=header',
+    title: 'DIGICLASH',
+    description: 'Digital Illustration and Graphics design.',
+    date: '19 March 2026'
+  },
+
+  {
+    image: sketchclashImg,
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSdojDYOyN0DuTCrCQXuekE-htGWu52DYXqNZcucuNrSLapmpg/viewform?usp=header',
+    title: 'SKETCHCLASH',
+    description: 'Art competition',
+    date: '19 March 2026'
+  },
+
+  {
+    image: rangamanchImg,
+    link: 'https://forms.gle/fh5erTx21nxxmdoz7',
+    title: 'RANGAMANCH',
+    description: 'Drama Competition',
+    date: '19 March 2026'
+  },
+
+  {
+    image: fofImg,
+    link: 'https://forms.gle/dzrxS3DeLW47BVAZ7',
+    title: 'FACTORY OF FRAMES',
+    description: 'Photography Competition',
+    date: '19 March 2026'
+  },
+
+  {
+    image: mdmaImg,
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSdBogrVgIM3cLvId5rS96Mhw9QOCwTMyyRQs8QRTSN2kvXuHg/viewform',
+    title: 'MDMA',
+    description: 'The Xtasy quiz.',
+    date: '19 March 2026'
+  },
+
+  {
+    image: reelVisionImg,
+    link: 'https://forms.gle/YFxcYHdq1E27wAm7A',
+    title: 'REEL VISION',
+    description: 'Short Video making competition',
+    date: '19 March 2026'
+  },
+
+  {
+    image: newsprintImg,
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSe37ou2mWrBnFlYmyLE11W6WCkpvsXkVfPOX-g4JNZG-lY1Sw/viewform?usp=header',
+    title: 'NEWSPRINT',
+    description: 'Live Reporting event.',
+    date: '19 March 2026'
+  },
+
+  {
+    image: bobImg,
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSeBfNEo3Qd-lteFVQldzYQXMBTnL7Bb4j3Qy0IHp0J0rhYclg/viewform',
+    title: 'BATTLE OF BANDS',
+    description: 'Where music meets mayhem !',
+    date: '20 March 2026'
+  },
+
+  {
+    image: unisonImg,
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSfmPc36pjPqZq3Ky8X-T4taUIPp8GRvhnVD09-Hjqbs-WvhNw/viewform',
+    title: 'UNISON',
+    description: 'Group Dance Competition',
+    date: '20 March 2026'
+  },
+
+  {
+    image: yuvaImg,
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSenWAPnUSU8mWU0UcYrgxHLiT4Zeq15jvBgnXTt_bALs6RaRQ/viewform',
+    title: 'YUVA SANSAD',
+    description: 'Parliamentary Debate.',
+    date: '20 March 2026'
+  },
+
+  {
+    image: cinefactoryImg,
+    link: 'https://forms.gle/s6vTmeKPX42WNxz5A',
+    title: 'CINEFACTORY',
+    description: 'Short-Film Competition',
+    date: '20 March 2026'
+  },
+
+  {
+    image: frontpageFrenzyImg,
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSeEbx2tclHZGgYhCkkomMkvNSnCtUHqaXQrHK-YclS9ffEogA/viewform',
+    title: 'FRONTPAGE FRENZY',
+    description: 'Newspaper frontpage designing competition.',
+    date: '19 March 2026'
+  },
+
+  {
+    image: overthinkTankImg,
+    link: 'http://docs.google.com/forms/d/e/1FAIpQLSenWAPnUSU8mWU0UcYrgxHLiT4Zeq15jvBgnXTt_bALs6RaRQ/viewform',
+    title: 'OVERTHINK TANK',
+    description: 'Defend The Undefendable.',
+    date: '20 March 2026'
+  },
 ];
 
 export const EventsPage = () => {
@@ -57,7 +199,7 @@ export const EventsPage = () => {
         setScale(1);
       }
     };
-    
+
     handleResize(); // Set initial
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
@@ -70,7 +212,7 @@ export const EventsPage = () => {
       {/* Decorative Background Elements for professional feel */}
       <div className="absolute top-[20%] left-[-10%] w-[40%] h-[40%] bg-hot-pink opacity-5 md:opacity-10 blur-[100px] rounded-full point-events-none" />
       <div className="absolute bottom-[10%] right-[-10%] w-[40%] h-[40%] bg-neon-yellow opacity-5 md:opacity-10 blur-[100px] rounded-full point-events-none" />
-      
+
       <div className="absolute left-4 top-1/2 -translate-y-1/2 hidden md:flex flex-col gap-6 text-white/20 font-heading text-sm uppercase tracking-[0.5em] rotate-180" style={{ writingMode: 'vertical-rl' }}>
         <span>Interact</span>
         <span className="w-[1px] h-12 bg-white/20 mx-auto"></span>
@@ -84,7 +226,7 @@ export const EventsPage = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="font-headingWide text-5xl md:text-7xl lg:text-[10rem] text-white uppercase tracking-wider text-shadow-glow leading-none">
-            <span className="md:hidden">THE<br/></span>
+            <span className="md:hidden">THE<br /></span>
             <span className="text-neon-yellow">EVENTS</span>
           </h2>
           <div className="w-24 md:w-32 h-1 md:h-2 bg-hot-pink mx-auto mt-4 md:mt-6" />
@@ -105,44 +247,84 @@ export const EventsPage = () => {
         initial={{ x: '100%', opacity: 0 }}
         animate={{ x: selectedEvent ? 0 : '100%', opacity: selectedEvent ? 1 : 0 }}
         transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-        className="fixed top-0 right-0 h-full w-full md:w-[600px] lg:w-[800px] bg-black/95 backdrop-blur-xl border-l border-hot-pink/30 z-[100] shadow-[0_0_50px_rgba(255,20,147,0.2)] flex flex-col pt-20 pb-10 overflow-y-auto"
+        className="fixed top-0 right-0 h-full w-full md:w-[500px] lg:w-[600px] bg-black/90 backdrop-blur-3xl border-l border-white/10 z-[200] shadow-[0_0_50px_rgba(0,0,0,0.5)] flex flex-col pt-24 pb-10 overflow-y-auto"
         style={{ pointerEvents: selectedEvent ? 'auto' : 'none' }}
       >
         {selectedEvent && (
           <>
             <button
               onClick={() => setSelectedEvent(null)}
-              className="absolute top-4 right-4 text-white/50 hover:text-hot-pink transition-colors group z-50 p-2 bg-black/50 rounded-full backdrop-blur-md"
+              className="absolute top-8 right-8 text-white/50 hover:text-hot-pink transition-all group z-50 p-2 bg-black/50 rounded-full backdrop-blur-md hover:scale-110 active:scale-95"
             >
               <span className="sr-only">Close</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transform group-hover:rotate-90 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transform group-hover:rotate-90 transition-transform duration-300">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
                 <line x1="6" y1="6" x2="18" y2="18"></line>
               </svg>
             </button>
 
-            <h3 className="font-headingWide text-4xl md:text-5xl lg:text-6xl text-white uppercase tracking-wider text-shadow-glow mb-6 px-6 md:px-10 text-center md:text-left mt-4">
-              {selectedEvent.title}
-            </h3>
-
-            <div className="px-6 md:px-10 mt-4 mb-8">
-              <a
-                href={selectedEvent.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative inline-flex items-center justify-center px-8 py-5 bg-transparent border-2 border-hot-pink text-white font-bold uppercase tracking-widest text-lg overflow-hidden group w-full text-center"
+            <div className="px-6 md:px-10 flex flex-col">
+              <motion.h3
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="font-headingWide text-3xl md:text-4xl text-white uppercase tracking-wider text-shadow-glow mb-2"
               >
-                <div className="absolute inset-0 bg-hot-pink translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out z-0"></div>
-                <span className="relative z-10 group-hover:text-black transition-colors duration-300">Register Now</span>
-              </a>
-            </div>
+                {selectedEvent.title}
+              </motion.h3>
 
-            <div className="w-full flex-1 flex flex-col justify-start">
-              <img
-                src={selectedEvent.image}
-                alt="Event Poster"
-                className="w-full h-auto object-contain border-t border-white/10"
+              <motion.div
+                initial={{ opacity: 0, width: 0 }}
+                animate={{ opacity: 1, width: '80px' }}
+                className="h-1 bg-hot-pink mb-4 shadow-[0_0_15px_rgba(255,20,147,0.5)]"
               />
+
+              <motion.p
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                className="text-white/60 text-sm font-body uppercase tracking-[0.2em] mb-2 italic"
+              >
+                {selectedEvent.date}
+              </motion.p>
+
+              <motion.p
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="text-white/80 text-base font-body mb-5 leading-relaxed"
+              >
+                {selectedEvent.description}
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className="mb-5"
+              >
+                <a
+                  href={selectedEvent.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative inline-flex items-center justify-center px-8 py-4 bg-hot-pink text-black font-heading text-lg uppercase tracking-widest overflow-hidden group w-full text-center shadow-[0_0_20px_rgba(255,47,166,0.3)] hover:shadow-[0_0_30px_rgba(255,47,166,0.5)] transition-all transform"
+                >
+                  <span className="relative z-10 font-bold">Register Now</span>
+                  <div className="absolute inset-0 bg-white translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
+                </a>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.4 }}
+                className="w-full rounded-xl overflow-hidden border border-white/10 shadow-2xl mb-6 bg-black flex items-center justify-center"
+              >
+                <img
+                  src={selectedEvent.image}
+                  alt={selectedEvent.title}
+                  className="w-full max-h-[95vh] object-contain"
+                />
+              </motion.div>
             </div>
           </>
         )}
