@@ -1,0 +1,29 @@
+﻿node_modules/@react-three/fiber/dist/declarations/src/core/renderer.d.ts(3,8): error TS1259: Module '"D:/projects/polaroid_fest/xtasy-demo/node_modules/@types/react-reconciler/index"' can only be default-imported using the 'esModuleInterop' flag
+node_modules/hls.js/dist/hls.d.ts(101,43): error TS2315: Type 'Uint8Array' is not generic.
+node_modules/hls.js/dist/hls.d.ts(436,11): error TS2315: Type 'Uint8Array' is not generic.
+node_modules/hls.js/dist/hls.d.ts(874,9): error TS2315: Type 'Uint8Array' is not generic.
+node_modules/hls.js/dist/hls.d.ts(875,10): error TS2315: Type 'Uint8Array' is not generic.
+node_modules/hls.js/dist/hls.d.ts(876,12): error TS2315: Type 'Uint8Array' is not generic.
+node_modules/hls.js/dist/hls.d.ts(877,11): error TS2315: Type 'Uint8Array' is not generic.
+node_modules/hls.js/dist/hls.d.ts(899,14): error TS2315: Type 'Uint8Array' is not generic.
+node_modules/hls.js/dist/hls.d.ts(903,28): error TS2315: Type 'Uint8Array' is not generic.
+node_modules/hls.js/dist/hls.d.ts(2759,9): error TS2315: Type 'Uint8Array' is not generic.
+node_modules/hls.js/dist/hls.d.ts(2760,10): error TS2315: Type 'Uint8Array' is not generic.
+node_modules/hls.js/dist/hls.d.ts(2761,12): error TS2315: Type 'Uint8Array' is not generic.
+node_modules/hls.js/dist/hls.d.ts(2762,11): error TS2315: Type 'Uint8Array' is not generic.
+node_modules/hls.js/dist/hls.d.ts(2764,47): error TS2315: Type 'Uint8Array' is not generic.
+node_modules/hls.js/dist/hls.d.ts(2765,41): error TS2315: Type 'Uint8Array' is not generic.
+node_modules/hls.js/dist/hls.d.ts(2766,94): error TS2315: Type 'Uint8Array' is not generic.
+node_modules/hls.js/dist/hls.d.ts(3366,12): error TS2315: Type 'Uint8Array' is not generic.
+node_modules/hls.js/dist/hls.d.ts(3367,13): error TS2315: Type 'Uint8Array' is not generic.
+src/components/MerchModel.tsx(4,22): error TS2307: Cannot find module '../assets/merch_model/XTASY_2026_BAKEEEEE.glb' or its corresponding type declarations.
+src/components/MerchModel.tsx(9,10): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/MerchModel.tsx(14,5): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/MerchModel.tsx(16,7): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/MerchModel.tsx(18,7): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/MerchModel.tsx(22,9): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/MerchModel.tsx(23,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/MerchModel.tsx(24,13): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/MerchModel.tsx(26,11): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/MerchModel.tsx(36,7): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/MerchModel.tsx(37,9): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.

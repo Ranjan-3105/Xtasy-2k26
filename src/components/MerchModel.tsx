@@ -4,8 +4,8 @@ import { Suspense } from 'react';
 import modelUrl from '../assets/merch_model/XTASY_2026_BAKEEEEE.glb';
 
 function Model(props: any) {
-  const { scene } = useGLTF(modelUrl);
-  
+  const { scene } = useGLTF(modelUrl) as any;
+
   return <primitive object={scene} {...props} />;
 }
 
@@ -14,7 +14,7 @@ export function MerchModel() {
     <div className="w-full h-full min-h-[400px] md:min-h-[600px] bg-black/50 rounded-3xl border border-white/10 overflow-hidden relative shadow-[0_0_30px_rgba(230,0,126,0.15)]">
       {/* Glow Effect */}
       <div className="absolute inset-0 bg-hot-pink/5 blur-[100px] pointer-events-none" />
-      
+
       <Canvas
         camera={{ position: [0, 0, 5], fov: 45 }}
         className="cursor-grab active:cursor-grabbing w-full h-full touch-none"
@@ -23,7 +23,7 @@ export function MerchModel() {
           <Stage environment="city" intensity={0.5} adjustCamera={1.2}>
             <Model />
           </Stage>
-          <OrbitControls 
+          <OrbitControls
             enablePan={false}
             enableZoom={false}
             autoRotate
