@@ -104,7 +104,7 @@ export const Register = () => {
             <motion.span
               className="absolute inset-0 z-20 flex items-center justify-center gap-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
             >
-              REGISTER NOW
+              BROCHURE              
               <ArrowRight className="w-8 h-8" />
             </motion.span>
           </motion.button>

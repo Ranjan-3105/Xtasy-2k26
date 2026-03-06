@@ -19,33 +19,33 @@ import eye from '../assets/eye.png';
 import guitar from '../assets/guitarElem1.png';
 
 // Import event images
-import burnoutImg from '../assets/events/Burnout.webp';
-import sinfoniettaImg from '../assets/events/Sinfonietta.webp';
-import relayArtImg from '../assets/events/Relay_art_challenge.webp';
-import chaurahaImg from '../assets/events/Chauraha.webp';
-import nrutyaImg from '../assets/events/Nrutya_naivedya.webp';
-import questionableImg from '../assets/events/Questionable.webp';
-import guessworkImg from '../assets/events/Guesswork_in_progress.webp';
-import digiclashImg from '../assets/events/DIgiclash.webp';
-import sketchclashImg from '../assets/events/Sketchclash.webp';
-import rangamanchImg from '../assets/events/Rangmanch.webp';
-import unisonImg from '../assets/events/Unison.webp';
-import mdmaImg from '../assets/events/Mdma.webp';
-import newsprintImg from '../assets/events/Newsprint.webp';
-import bobImg from '../assets/events/Battle_of_bands.webp';
-import yuvaImg from '../assets/events/Yuva_sansad.webp';
-import cinefactoryImg from '../assets/events/Cinefactory.webp';
-import fofImg from '../assets/events/Factory_of_frames.webp';
-import reelVisionImg from '../assets/events/Reel_vision.webp';
-import frontpageFrenzyImg from '../assets/events/FrontPageFrenzy.webp';
-import overthinkTankImg from '../assets/events/TheOverthinkTank.webp';
+import burnoutImg from '../assets/events/burnout.webp';
+import sinfoniettaImg from '../assets/events/sinefonietta.webp';
+import relayArtImg from '../assets/events/relay_art_challenge.webp';
+import chaurahaImg from '../assets/events/chauraha.webp';
+import nrutyaImg from '../assets/events/nrutya_naivedya.webp';
+import questionableImg from '../assets/events/questionable.webp';
+import guessworkImg from '../assets/events/guesswork_in_progress.webp';
+import digiclashImg from '../assets/events/digiclash.webp';
+import sketchclashImg from '../assets/events/sketchclash.webp';
+import rangamanchImg from '../assets/events/rangamanch.webp';
+import unisonImg from '../assets/events/unison.webp';
+import mdmaImg from '../assets/events/MDMA.webp';
+import newsprintImg from '../assets/events/newsprint.webp';
+import bobImg from '../assets/events/battle_of_bands.webp';
+import yuvaImg from '../assets/events/yuva_sansad.webp';
+import cinefactoryImg from '../assets/events/cinefactory.webp';
+import fofImg from '../assets/events/factory_of_frames.webp';
+import reelVisionImg from '../assets/events/reel_vision.webp';
+import frontpageFrenzyImg from '../assets/events/frontpage_frenzy.webp';
+import overthinkTankImg from '../assets/events/the_overthink_tank.webp';
 
 interface EventItem {
   title: string;
   subtitle: string;
   icon: React.ComponentType<any>;
   color: string;
-  image: string;
+  image: string | null;
   link: string;
 }
 
@@ -70,15 +70,19 @@ const timeline: DayGroup[] = [
     date: '18 MARCH',
     accent: 'hot-pink',
     events: [
-      { title: 'GUESSWORK IN PROGRESS', subtitle: 'Themed Quiz', icon: MessageSquare, color: 'neon-yellow', image: guessworkImg, link: 'https://forms.gle/wk9euirFZ4xGkjvi9' },
+      {
+        title: 'GUESSWORK IN PROGRESS', subtitle: 'Themed Quiz', icon: MessageSquare, color: 'neon-yellow', image: guessworkImg,
+        link: 'https://forms.gle/rJmtrQNWWPG9exwk8'
+      },
       { title: 'RELAY ART', subtitle: 'Team Painting Competition', icon: Star, color: 'white', image: relayArtImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSc62QAUHhQFdo7jy-hMwRvbGJF9yMCEHe32U_YPTPYW8LLyrw/viewform?usp=header' },
       { title: 'SINFONIETTA', subtitle: 'Solo Singing Competition', icon: Music, color: 'hot-pink', image: sinfoniettaImg, link: 'https://forms.gle/Cpy3fD7xYr4XsD6e9' },
       { title: 'CHAURAHA', subtitle: 'Nukkad Natak', icon: Users, color: 'neon-yellow', image: chaurahaImg, link: 'https://forms.gle/fh5erTx21nxxmdoz7' },
       { title: 'NRUTYA NAIVEDYA', subtitle: 'Solo Odissi Dance Competition', icon: Zap, color: 'hot-pink', image: nrutyaImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSf-OUwRoDF_evjy82fgntrfP7vLvcxfBKWFdEDkDXXrxyypBw/viewform' },
       { title: 'YUVA SANSAD', subtitle: 'Parliamentary Debate', icon: Landmark, color: 'white', image: yuvaImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSenWAPnUSU8mWU0UcYrgxHLiT4Zeq15jvBgnXTt_bALs6RaRQ/viewform' },
-      { title: 'FACTORY OF FRAMES', subtitle: 'Photography Workshop', icon: Camera, color: 'neon-yellow', image: fofImg, link: 'https://forms.gle/dzrxS3DeLW47BVAZ7' },
-      { title: 'REEL VISION', subtitle: 'Videography Workshop', icon: Video, color: 'hot-pink', image: reelVisionImg, link: 'https://forms.gle/YFxcYHdq1E27wAm7A' },
+
       { title: 'FRONTPAGE FRENZY', subtitle: 'Newspaper Frontpage Design Competition', icon: BookOpen, color: 'white', image: frontpageFrenzyImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSeEbx2tclHZGgYhCkkomMkvNSnCtUHqaXQrHK-YclS9ffEogA/viewform' },
+
+      { title: 'Photography Workshop', subtitle: 'Photography Workshop', icon: BookOpen, color: 'white', image: null, link: 'https://forms.gle/yEpYWZCAtjsYZbeU8' },
     ],
   },
   {
@@ -91,6 +95,8 @@ const timeline: DayGroup[] = [
       { title: 'UNISON', subtitle: 'Group Dance Competition', icon: Zap, color: 'white', image: unisonImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSfmPc36pjPqZq3Ky8X-T4taUIPp8GRvhnVD09-Hjqbs-WvhNw/viewform' },
       { title: 'RANGAMANCH', subtitle: 'Monoact / Duoact Competition', icon: Users, color: 'neon-yellow', image: rangamanchImg, link: 'https://forms.gle/fh5erTx21nxxmdoz7' },
       { title: 'CINEFACTORY', subtitle: 'Short Film Making Competition', icon: Video, color: 'hot-pink', image: cinefactoryImg, link: 'https://forms.gle/s6vTmeKPX42WNxz5A' },
+      { title: 'FACTORY OF FRAMES', subtitle: 'Photography Competition', icon: Camera, color: 'neon-yellow', image: fofImg, link: 'https://forms.gle/dzrxS3DeLW47BVAZ7' },
+      { title: 'REEL VISION', subtitle: 'Reel Making Competition', icon: Video, color: 'hot-pink', image: reelVisionImg, link: 'https://forms.gle/YFxcYHdq1E27wAm7A' },
       { title: 'NEWSPRINT', subtitle: 'News Reporting Competition', icon: BookOpen, color: 'white', image: newsprintImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSe37ou2mWrBnFlYmyLE11W6WCkpvsXkVfPOX-g4JNZG-lY1Sw/viewform?usp=header' },
       { title: 'DIGICLASH', subtitle: 'Digital Art & Graphic Design Competition', icon: Pen, color: 'neon-yellow', image: digiclashImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSdojDYOyN0DuTCrCQXuekE-htGWu52DYXqNZcucuNrSLapmpg/viewform?usp=header' },
       { title: 'SKETCHCLASH', subtitle: 'Sketch Competition', icon: Star, color: 'hot-pink', image: sketchclashImg, link: 'https://docs.google.com/forms/d/e/1FAIpQLSdojDYOyN0DuTCrCQXuekE-htGWu52DYXqNZcucuNrSLapmpg/viewform?usp=header' },
@@ -207,20 +213,20 @@ export const Events = () => {
                           {/* Dot connector */}
                           <div
                             className={`absolute -left-[calc(2rem+5px)] md:-left-[calc(2.5rem+5px)] w-[8px] h-[8px] rounded-full ${event.color === "neon-yellow"
-                                ? "bg-neon-yellow"
-                                : event.color === "hot-pink"
-                                  ? "bg-hot-pink"
-                                  : "bg-white"
+                              ? "bg-neon-yellow"
+                              : event.color === "hot-pink"
+                                ? "bg-hot-pink"
+                                : "bg-white"
                               } opacity-40 group-hover:opacity-100 transition-opacity`}
                           />
 
                           {/* Icon */}
                           <div
                             className={`w-9 h-9 md:w-10 md:h-10 rounded flex items-center justify-center flex-shrink-0 ${event.color === "neon-yellow"
-                                ? "bg-neon-yellow/10 text-neon-yellow"
-                                : event.color === "hot-pink"
-                                  ? "bg-hot-pink/10 text-hot-pink"
-                                  : "bg-white/10 text-white"
+                              ? "bg-neon-yellow/10 text-neon-yellow"
+                              : event.color === "hot-pink"
+                                ? "bg-hot-pink/10 text-hot-pink"
+                                : "bg-white/10 text-white"
                               }`}
                           >
                             <Icon className="w-4 h-4 md:w-5 md:h-5" />
@@ -334,18 +340,20 @@ export const Events = () => {
               </a>
 
               {/* Poster */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.96 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.3 }}
-                className="w-full flex justify-center"
-              >
-                <img
-                  src={selectedEvent.image}
-                  alt={selectedEvent.title}
-                  className="w-full max-h-[70vh] object-contain rounded-lg border border-white/10"
-                />
-              </motion.div>
+              {selectedEvent.image && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.96 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.3 }}
+                  className="w-full flex justify-center"
+                >
+                  <img
+                    src={selectedEvent.image}
+                    alt={selectedEvent.title}
+                    className="w-full max-h-[70vh] object-contain rounded-lg border border-white/10"
+                  />
+                </motion.div>
+              )}
 
             </div>
           </>

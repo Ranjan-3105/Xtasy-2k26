@@ -4,26 +4,26 @@ import { motion } from 'framer-motion';
 
 const InfiniteMenu = lazy(() => import('./InfiniteMenu'));
 
-import burnoutImg from '../assets/events/Burnout.webp';
-import sinfoniettaImg from '../assets/events/Sinfonietta.webp';
-import relayArtImg from '../assets/events/Relay_art_challenge.webp';
-import chaurahaImg from '../assets/events/Chauraha.webp';
-import nrutyaImg from '../assets/events/Nrutya_naivedya.webp';
-import questionableImg from '../assets/events/Questionable.webp';
-import guessworkImg from '../assets/events/Guesswork_in_progress.webp';
-import digiclashImg from '../assets/events/DIgiclash.webp';
-import sketchclashImg from '../assets/events/Sketchclash.webp';
-import rangamanchImg from '../assets/events/Rangmanch.webp';
-import unisonImg from '../assets/events/Unison.webp';
-import mdmaImg from '../assets/events/Mdma.webp';
-import newsprintImg from '../assets/events/Newsprint.webp';
-import bobImg from '../assets/events/Battle_of_bands.webp';
-import yuvaImg from '../assets/events/Yuva_sansad.webp';
-import cinefactoryImg from '../assets/events/Cinefactory.webp';
-import fofImg from '../assets/events/Factory_of_frames.webp';
-import reelVisionImg from '../assets/events/Reel_vision.webp';
-import frontpageFrenzyImg from '../assets/events/FrontPageFrenzy.webp';
-import overthinkTankImg from '../assets/events/TheOverthinkTank.webp';
+import burnoutImg from '../assets/events/burnout.webp';
+import sinfoniettaImg from '../assets/events/sinefonietta.webp';
+import relayArtImg from '../assets/events/relay_art_challenge.webp';
+import chaurahaImg from '../assets/events/chauraha.webp';
+import nrutyaImg from '../assets/events/nrutya_naivedya.webp';
+import questionableImg from '../assets/events/questionable.webp';
+import guessworkImg from '../assets/events/guesswork_in_progress.webp';
+import digiclashImg from '../assets/events/digiclash.webp';
+import sketchclashImg from '../assets/events/sketchclash.webp';
+import rangamanchImg from '../assets/events/rangamanch.webp';
+import unisonImg from '../assets/events/unison.webp';
+import mdmaImg from '../assets/events/MDMA.webp';
+import newsprintImg from '../assets/events/newsprint.webp';
+import bobImg from '../assets/events/battle_of_bands.webp';
+import yuvaImg from '../assets/events/yuva_sansad.webp';
+import cinefactoryImg from '../assets/events/cinefactory.webp';
+import fofImg from '../assets/events/factory_of_frames.webp';
+import reelVisionImg from '../assets/events/reel_vision.webp';
+import frontpageFrenzyImg from '../assets/events/frontpage_frenzy.webp';
+import overthinkTankImg from '../assets/events/the_overthink_tank.webp';
 
 const items = [
   {
