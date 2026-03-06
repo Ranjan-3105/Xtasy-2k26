@@ -2,14 +2,14 @@ import { motion } from 'framer-motion';
 import { useScrollDepth } from '../hooks/useScrollDepth';
 import { Camera } from 'lucide-react';
 
-import img1 from '../assets/AMUZA 2 1.png';
+import img1 from '../assets/gallery1.jpeg';
 import img2 from '../assets/AcrossTheSpiderVerse 1.png';
-import img3 from '../assets/INKVENT 2 1.png';
+import img3 from '../assets/gallery2.jpeg';
 import img4 from '../assets/PARTHO_3 1.png';
-import img5 from '../assets/PF 3 1.png';
+import img5 from '../assets/gallery3.jpeg';
 import img6 from '../assets/PF 4.png';
-import img7 from '../assets/PHOTOFACTORY 1.png';
-import img8 from '../assets/QUIZ 01 1.png';
+import img7 from '../assets/galler4.jpeg';
+import img8 from '../assets/gallery5.jpeg';
 
 const galleryImages = [
   { id: 1, src: img1, height: 'h-64', overlay: 'neon-yellow' },
@@ -56,8 +56,8 @@ export const Gallery = () => {
         </div>
       </div>
 
-      <div className="absolute top-40 left-20 w-96 h-96 bg-hot-pink opacity-5 blur-[150px] rounded-full" />
-      <div className="absolute bottom-40 right-20 w-96 h-96 bg-neon-yellow opacity-5 blur-[150px] rounded-full" />
+      <div className="absolute top-40 left-20 w-96 h-96 bg-hot-pink opacity-5 blur-[150px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-40 right-20 w-96 h-96 bg-neon-yellow opacity-5 blur-[150px] rounded-full pointer-events-none" />
     </section>
   );
 };
@@ -81,16 +81,21 @@ const GalleryItem = ({ image, index }: GalleryItemProps) => {
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.3 }}
       >
-        <img loading="lazy" src={image.src} alt={`Gallery ${image.id}`} className="absolute inset-0 w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500" />
+        <img 
+          loading="lazy" 
+          src={image.src} 
+          alt={`Gallery ${image.id}`} 
+          className="absolute inset-0 w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500" 
+        />
 
         <motion.div
           className={`absolute inset-0 ${
             image.overlay === 'neon-yellow' ? 'bg-neon-yellow' : 'bg-hot-pink'
-          } mix-blend-multiply opacity-0 group-hover:opacity-60 transition-opacity duration-300`}
+          } mix-blend-multiply opacity-0 group-hover:opacity-60 transition-opacity duration-300 z-10`}
         />
 
         <motion.div
-          className="absolute inset-0 border-4 border-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          className="absolute inset-0 border-4 border-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20"
           initial={false}
           whileHover={{
             scale: 0.95,
@@ -98,7 +103,7 @@ const GalleryItem = ({ image, index }: GalleryItemProps) => {
         />
 
         <motion.div
-          className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30"
           animate={{
             rotate: [0, 5, -5, 0],
           }}

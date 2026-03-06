@@ -22,7 +22,6 @@ const EventsPage = lazy(() => import('./components/EventsPage').then(module => (
 const AboutPage = lazy(() => import('./components/AboutPage').then(module => ({ default: module.AboutPage })));
 const SponsorsPage = lazy(() => import('./components/SponsorsPage').then(module => ({ default: module.SponsorsPage })));
 const MerchPage = lazy(() => import('./components/MerchPage').then(module => ({ default: module.MerchPage })));
-const TeamPage = lazy(() => import('./components/Team').then(module => ({ default: module.Team })));
 
 function HomePage() {
   return (
@@ -92,7 +91,6 @@ function HomePage() {
                 <Link to="/events" className="hover:text-hot-pink transition-colors">Events</Link>
                 <Link to="/about" className="hover:text-hot-pink transition-colors">About</Link>
                 <Link to="/sponsors" className="hover:text-hot-pink transition-colors">Sponsors</Link>
-                <Link to="/team" className="hover:text-hot-pink transition-colors">Team</Link>
                 <a href="https://forms.google.com" target="_blank" rel="noopener noreferrer" className="hover:text-hot-pink transition-colors text-neon-yellow font-bold">Register Now</a>
               </div>
             </div>
@@ -152,7 +150,6 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/sponsors" element={<SponsorsPage />} />
           <Route path="/merch" element={<MerchPage />} />
-          <Route path="/team" element={<TeamPage />} />
         </Routes>
       </Suspense>
     </>

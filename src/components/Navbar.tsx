@@ -21,7 +21,6 @@ export const Navbar = () => {
   const navLinks = [
     { name: 'Events', href: '/events' },
     { name: 'About', href: '/about' },
-    { name: 'Team', href: '/team' },
     { name: 'Sponsors', href: '/sponsors' },
     { name: 'Merch', href: '/merch' },
   ];
