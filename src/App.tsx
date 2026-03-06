@@ -55,11 +55,11 @@ function HomePage() {
                   <Mail className="w-6 h-6 text-hot-pink" />
                   cultsec@outr.ac.in
                 </a>
-                <a href="tel:+918804928091" className="flex items-center gap-4 hover:text-white transition-colors text-lg">
+                <a href="tel:+916370848789" className="flex items-center gap-4 hover:text-white transition-colors text-lg">
                   <Phone className="w-6 h-6 text-hot-pink" />
                   Cultural Secretary: +91 6370848789
                 </a>
-                <a href="tel:+917608823126" className="flex items-center gap-4 hover:text-white transition-colors text-lg">
+                <a href="tel:+918249365883" className="flex items-center gap-4 hover:text-white transition-colors text-lg">
                   <Phone className="w-6 h-6 text-hot-pink" />
                   Deputy Cultural Secretary: +91 8249365883
                 </a>

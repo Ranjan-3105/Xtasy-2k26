@@ -125,8 +125,8 @@ export const Register = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <div className="border-4 border-black p-6 bg-white will-change-transform transform hover:scale-105 transition-transform duration-300">
-            <h3 className="font-heading text-4xl text-black mb-2">FREE</h3>
-            <p className="text-black font-bold uppercase text-sm">ENTRY FOR ALL</p>
+            <h3 className="font-heading text-4xl text-black mb-2">10,000+</h3>
+            <p className="text-black font-bold uppercase text-sm">FOOTFALL</p>
           </div>
 
           <div className="border-4 border-black p-6 bg-hot-pink will-change-transform transform hover:scale-105 transition-transform duration-300">
