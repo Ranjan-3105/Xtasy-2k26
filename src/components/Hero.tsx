@@ -56,7 +56,7 @@ export const Hero = () => {
           muted 
           playsInline
           webkit-playsinline="true"
-          preload="auto"
+          preload="metadata"
           className="w-full h-full object-cover opacity-40 md:opacity-50 pointer-events-none"
         >
           <source src={heroVideo} type="video/mp4" />
@@ -76,6 +76,7 @@ export const Hero = () => {
       <motion.img
         src={starSkull}
         alt=""
+        loading="lazy"
         className="absolute bottom-[15%] right-[5%] md:bottom-[20%] md:right-[10%] w-24 h-24 md:w-32 md:h-32 object-contain opacity-30 md:opacity-40 blur-[1px] pointer-events-none z-0"
         animate={{ y: [0, 30, 0], rotate: [0, -15, 15, 0] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
@@ -91,6 +92,7 @@ export const Hero = () => {
           <motion.img
             src={Tlogo}
             alt="Xtasy Logo"
+            fetchPriority="high"
             className="w-32 h-auto md:w-56 lg:w-64 mb-7 object-contain"
             initial={{ scale: 0 }}
             animate={{ scale: 1.5 }}

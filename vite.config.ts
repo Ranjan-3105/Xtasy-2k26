@@ -4,8 +4,9 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
-    host: true, // or '0.0.0.0'
-    port: 5173, // Optional: default is 5173
+    host: '0.0.0.0', // Bind to all network interfaces for reliable mobile testing
+    port: 5173,
+    strictPort: false,
   },
   plugins: [react()],
   optimizeDeps: {

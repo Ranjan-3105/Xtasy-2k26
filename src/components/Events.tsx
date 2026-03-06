@@ -9,7 +9,8 @@ import {
   Star,
   BookOpen,
   Landmark,
-  Video
+  Video,
+  ArrowRight
 } from 'lucide-react';
 import eye from '../assets/eye.png';
 import guitar from '../assets/guitarElem1.png';
@@ -115,7 +116,7 @@ export const Events = () => {
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 >
-                  →
+                  <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
                 </motion.span>
              </span>
              <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out" />
