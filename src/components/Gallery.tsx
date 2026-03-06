@@ -81,7 +81,7 @@ const GalleryItem = ({ image, index }: GalleryItemProps) => {
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.3 }}
       >
-        <img src={image.src} alt={`Gallery ${image.id}`} className="absolute inset-0 w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500" />
+        <img loading="lazy" src={image.src} alt={`Gallery ${image.id}`} className="absolute inset-0 w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500" />
 
         <motion.div
           className={`absolute inset-0 ${

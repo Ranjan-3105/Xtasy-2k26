@@ -23,5 +23,6 @@ export default defineConfig({
     },
     // Generate sub-500kb chunks safely without warnings
     chunkSizeWarningLimit: 600,
-  }
+  },
+  assetsInclude: ['**/*.glb'],
 });

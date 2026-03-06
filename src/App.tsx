@@ -6,12 +6,15 @@ import { ScrollProgress } from './components/ScrollProgress';
 import { LoaderHandler } from './components/LoaderHandler';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { About } from './components/About';
-import { Events } from './components/Events';
-import { Gallery } from './components/Gallery';
-import { Schedule } from './components/Schedule';
-import { Register } from './components/Register';
 import { Mail, MapPin, Phone, Instagram } from 'lucide-react';
+
+// Lazy load heavy homepage sections to improve initial JS payload
+const About = lazy(() => import('./components/About').then(module => ({ default: module.About })));
+const Events = lazy(() => import('./components/Events').then(module => ({ default: module.Events })));
+const Gallery = lazy(() => import('./components/Gallery').then(module => ({ default: module.Gallery })));
+const GuessTheStar = lazy(() => import('./components/GuessTheStar').then(module => ({ default: module.GuessTheStar })));
+const Schedule = lazy(() => import('./components/Schedule').then(module => ({ default: module.Schedule })));
+const Register = lazy(() => import('./components/Register').then(module => ({ default: module.Register })));
 import { TornEdge } from './components/TornEdge';
 
 // Lazy load secondary pages
@@ -29,11 +32,14 @@ function HomePage() {
 
       <main className="relative">
         <Hero />
-        <div id="about"><About /></div>
-        <div id="events"><Events /></div>
-        <div id="gallery"><Gallery /></div>
-        <Schedule />
-        <Register />
+        <Suspense fallback={<div className="min-h-screen bg-black" />}>
+          <div id="about"><About /></div>
+          <div id="events"><Events /></div>
+          <div id="gallery"><Gallery /></div>
+          <GuessTheStar />
+          <Schedule />
+          <Register />
+        </Suspense>
         
         {/* Adds the punk/grunge torn paper edge before the footer */}
         <TornEdge />
@@ -52,11 +58,11 @@ function HomePage() {
                 </a>
                 <a href="tel:+918804928091" className="flex items-center gap-4 hover:text-white transition-colors text-lg">
                   <Phone className="w-6 h-6 text-hot-pink" />
-                  Cordinator: +91 6370848789
+                  Cultural Secretary: +91 6370848789
                 </a>
                 <a href="tel:+917608823126" className="flex items-center gap-4 hover:text-white transition-colors text-lg">
                   <Phone className="w-6 h-6 text-hot-pink" />
-                  Co-Cordinator: +91 8249365883
+                  Deputy Cultural Secretary: +91 8249365883
                 </a>
                 <div className="flex items-center gap-4 hover:text-white transition-colors mt-2 text-lg leading-tight">
                   <MapPin className="w-6 h-6 text-hot-pink flex-shrink-0" />

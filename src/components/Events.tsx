@@ -52,6 +52,7 @@ export const Events = () => {
         <motion.img
            src={guitar}
            alt=""
+           loading="lazy"
            className="w-full h-full object-contain mix-blend-screen"
            animate={{ y: [0, 30, 0], x: [0, 15, 0] }}
            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
@@ -61,6 +62,7 @@ export const Events = () => {
         <motion.img
            src={eye}
            alt=""
+           loading="lazy"
            className="w-full h-full object-contain"
            animate={{ rotate: [-10, 10, -10], scale: [1, 1.1, 1] }}
            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}

@@ -11,6 +11,7 @@ type Dev = {
   contribution: string;
   github: string;
   linkedin: string;
+  instagram: string;
 };
 
 const developers: Dev[] = [
@@ -21,29 +22,54 @@ const developers: Dev[] = [
     image: "/src/assets/dev/soumya.jpeg",
     contribution:
       "Designed and developed the main website architecture, animations, and interactive UI components including event pages and developer profiles.",
-    github: "https://github.com/",
-    linkedin: "https://linkedin.com/"
+    github: "https://github.com/Ranjan-3105",
+    linkedin: "https://linkedin.com/in/soumya-ranjan-nanda-849489214",
+    instagram: "https://www.instagram.com/im_s.r.n/"
   },
   {
     id: 2,
-    name: "Developer Name",
+    name: "Hitesh Kumar Nayak",
     role: "Frontend Developer",
-    image: "/src/assets/dev/dev2.jpg",
+    image: "/src/assets/dev/hitesh.jpeg",
     contribution:
       "Implemented responsive layouts, UI components, and optimized performance across different devices.",
-    github: "#",
-    linkedin: "#"
+    github: "https://github.com/Hiteshpy07",
+    linkedin: "https://www.linkedin.com/in/hitesh-kumar-nayak-40653b373/",
+    instagram: "https://www.instagram.com/_hitesh_.27._/"
   },
   {
     id: 3,
-    name: "Developer Name",
-    role: "Backend Developer",
-    image: "/src/assets/dev/dev3.jpg",
+    name: "Aditya Acharya",
+    role: "Component Designer",
+    image: "/src/assets/dev/aditya.jpeg",
     contribution:
-      "Handled backend logic, integrations, and data flow for registrations and system operations.",
+      "Contributed creative ideas for various components and assisted in designing several UI elements to enhance the overall user experience.",
     github: "#",
-    linkedin: "#"
-  }
+    linkedin: "https://www.linkedin.com/in/aditya-prakash-acharya-a1b971277",
+    instagram: "https://www.instagram.com/aditya._acharya._/"
+  },
+  {
+    id: 4,
+    name: "Tanav",
+    role: "Component Designer",
+    image: "/src/assets/dev/tanav.jpeg",  
+    contribution:
+      "Contributed creative ideas for various components and assisted in designing several UI elements to enhance the overall user experience.",
+    github: "#",
+    linkedin: "#",
+    instagram: "https://www.instagram.com/thenvw/"
+  },
+  {
+    id: 5,
+    name: "Sidhant Pandey",
+    role: "Budget & Deployment Manager",
+    image: "/src/assets/dev/sidhant.jpeg",  
+    contribution:
+      "Managed the project budget and oversaw the financial planning for website deployment, ensuring resources were allocated efficiently and deployment costs were handled effectively.",
+    github: "https://github.com/Sidhant-pandey1",
+    linkedin: "https://www.linkedin.com/in/sidhant-pandey-1/",
+    instagram: "https://www.instagram.com/sidhant_pandey1/"
+  },
 ];
 
 export default function Card() {
@@ -72,7 +98,8 @@ export default function Card() {
             <motion.img
               layoutId={`image-${dev.id}`}
               src={dev.image}
-              className="h-72 w-full object-cover"
+              loading="lazy"
+              className="h-72 w-full object-cover object-top"
             />
 
             <div className="p-4">
@@ -111,15 +138,18 @@ export default function Card() {
             <div className="fixed inset-0 flex items-center justify-center z-50 p-4">
               <motion.div
                 layoutId={`card-${active.id}`}
-                className="bg-neutral-900 rounded-2xl max-w-2xl w-full overflow-hidden"
+                className="bg-neutral-900 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto flex flex-col"
               >
-                <motion.img
-                  layoutId={`image-${active.id}`}
-                  src={active.image}
-                  className="h-80 w-full object-cover"
-                />
+                <div className="w-full bg-black/50 flex justify-center flex-shrink-0 p-4">
+                  <motion.img
+                    layoutId={`image-${active.id}`}
+                    src={active.image}
+                    loading="lazy"
+                    className="h-48 sm:h-64 md:h-80 w-full object-contain rounded-xl"
+                  />
+                </div>
 
-                <div className="p-8 space-y-5">
+                <div className="p-5 sm:p-8 space-y-3 sm:space-y-5">
                   <motion.h2
                     layoutId={`name-${active.id}`}
                     className="text-3xl font-bold"
@@ -143,11 +173,11 @@ export default function Card() {
                     </p>
                   </div>
 
-                  <div className="flex gap-4 pt-4">
+                  <div className="flex flex-wrap gap-4 pt-4">
                     <a
                       href={active.github}
                       target="_blank"
-                      className="px-4 py-2 bg-white text-black rounded-lg font-semibold"
+                      className="px-4 py-2 bg-white text-black hover:bg-neutral-200 transition-colors rounded-lg font-semibold"
                     >
                       GitHub
                     </a>
@@ -155,14 +185,24 @@ export default function Card() {
                     <a
                       href={active.linkedin}
                       target="_blank"
-                      className="px-4 py-2 border border-neutral-600 rounded-lg"
+                      className="px-4 py-2 border border-neutral-600 hover:text-neon-yellow hover:border-neon-yellow transition-colors rounded-lg"
                     >
                       LinkedIn
                     </a>
 
+                    {active.instagram && (
+                      <a
+                        href={active.instagram}
+                        target="_blank"
+                        className="px-4 py-2 border border-neutral-600 text-hot-pink hover:bg-hot-pink hover:text-white hover:border-hot-pink transition-all rounded-lg font-semibold"
+                      >
+                        Instagram
+                      </a>
+                    )}
+
                     <button
                       onClick={() => setActive(null)}
-                      className="ml-auto text-neutral-400"
+                      className="ml-auto text-neutral-400 hover:text-white transition-colors"
                     >
                       Close
                     </button>

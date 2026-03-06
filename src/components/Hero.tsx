@@ -2,11 +2,10 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
 import { Zap, Play, Pause } from 'lucide-react';
 import Tlogo from '../assets/XTASY_TRANSPARENT_RED.png'
-import eye from '../assets/eye.png';
 import starSkull from '../assets/starSkull.png';
-import heroVideo from '../assets/colored_backdrop.mp4';
+import heroVideo from '../assets/Colored BackdropH.264.mp4';
 import { Countdown } from './Countdown';
-
+  
 export const Hero = () => {
   const ref = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
