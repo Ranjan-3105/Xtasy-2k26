@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
 interface ScrollDepthOptions {
   threshold?: number;
@@ -16,12 +16,14 @@ export const useScrollDepth = (options: ScrollDepthOptions = {}) => {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsInView(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          setIsInView(true);
+        }
       },
       {
         threshold: options.threshold || 0.1,
-        rootMargin: options.rootMargin || '0px',
-      }
+        rootMargin: options.rootMargin || "0px",
+      },
     );
 
     observer.observe(element);
@@ -37,17 +39,18 @@ export const useScrollDepth = (options: ScrollDepthOptions = {}) => {
       const end = rect.top;
 
       if (start > 0 && end < windowHeight) {
-        const progress = 1 - (rect.top + elementHeight) / (windowHeight + elementHeight);
+        const progress =
+          1 - (rect.top + elementHeight) / (windowHeight + elementHeight);
         setScrollProgress(Math.max(0, Math.min(1, progress)));
       }
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
 
     return () => {
       observer.disconnect();
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [options.threshold, options.rootMargin]);
 

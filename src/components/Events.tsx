@@ -143,7 +143,7 @@ const events = [
 ];
 
 export const Events = () => {
-  const { ref, isInView } = useScrollDepth({ threshold: 0.2 });
+  const { ref, isInView } = useScrollDepth({ threshold: 0.05 });
   const [selectedEvent, setSelectedEvent] = useState<any>(null);
 
   const containerVariants = {
