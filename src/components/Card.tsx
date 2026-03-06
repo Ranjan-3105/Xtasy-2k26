@@ -3,6 +3,12 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+import soumyaImg from "../assets/dev/soumya.jpeg";
+import hiteshImg from "../assets/dev/hitesh.jpeg";
+import adityaImg from "../assets/dev/aditya.jpeg";
+import tanavImg from "../assets/dev/tanav.jpeg";
+import sidhantImg from "../assets/dev/sidhant.jpeg";
+
 type Dev = {
   id: number;
   name: string;
@@ -19,7 +25,7 @@ const developers: Dev[] = [
     id: 1,
     name: "Soumya Ranjan Nanda",
     role: "Full Stack Developer",
-    image: "/src/assets/dev/soumya.jpeg",
+    image: soumyaImg,
     contribution:
       "Designed and developed the main website architecture, animations, and interactive UI components including event pages and developer profiles.",
     github: "https://github.com/Ranjan-3105",
@@ -30,7 +36,7 @@ const developers: Dev[] = [
     id: 2,
     name: "Hitesh Kumar Nayak",
     role: "Frontend Developer",
-    image: "/src/assets/dev/hitesh.jpeg",
+    image: hiteshImg,
     contribution:
       "Implemented responsive layouts, UI components, and optimized performance across different devices.",
     github: "https://github.com/Hiteshpy07",
@@ -41,7 +47,7 @@ const developers: Dev[] = [
     id: 3,
     name: "Aditya Acharya",
     role: "Component Designer",
-    image: "/src/assets/dev/aditya.jpeg",
+    image: adityaImg,
     contribution:
       "Contributed creative ideas for various components and assisted in designing several UI elements to enhance the overall user experience.",
     github: "#",
@@ -52,7 +58,7 @@ const developers: Dev[] = [
     id: 4,
     name: "Tanav",
     role: "Component Designer",
-    image: "/src/assets/dev/tanav.jpeg",  
+    image: tanavImg,  
     contribution:
       "Contributed creative ideas for various components and assisted in designing several UI elements to enhance the overall user experience.",
     github: "#",
@@ -63,7 +69,7 @@ const developers: Dev[] = [
     id: 5,
     name: "Sidhant Pandey",
     role: "Budget & Deployment Manager",
-    image: "/src/assets/dev/sidhant.jpeg",  
+    image: sidhantImg,  
     contribution:
       "Managed the project budget and oversaw the financial planning for website deployment, ensuring resources were allocated efficiently and deployment costs were handled effectively.",
     github: "https://github.com/Sidhant-pandey1",

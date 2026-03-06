@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { mat4, quat, vec2, vec3 } from 'gl-matrix';
+import { ArrowUpRight } from 'lucide-react';
 import './InfiniteMenu.css';
 
 const discVertShaderSource = `#version 300 es
@@ -945,7 +946,9 @@ export default function InfiniteMenu({ items = [], scale = 1.0, onActionClick }:
           <p className={`face-description ${isMoving ? 'inactive' : 'active'}`}> {activeItem.description}</p>
 
           <div onClick={handleButtonClick} className={`action-button ${isMoving ? 'inactive' : 'active'}`}>
-            <p className="action-button-icon">&#x2197;</p>
+            <div className="action-button-icon">
+              <ArrowUpRight size={24} strokeWidth={3} />
+            </div>
           </div>
         </>
       )}

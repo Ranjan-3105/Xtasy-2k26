@@ -21,11 +21,19 @@
   height: 60px;
   display: grid;
   place-items: center;
-  background: #5227ff;
+  background: white;
   border: none;
   border-radius: 50%;
   cursor: pointer;
   border: 5px solid #000;
+  box-shadow: 0 0 15px rgba(254, 234, 7, 0.3);
+  transition: all 0.3s ease;
+}
+
+.action-button:hover {
+  background: #FEEA07;
+  transform: translateX(-50%) scale(1.1) !important;
+  box-shadow: 0 0 25px rgba(254, 234, 7, 0.5);
 }
 
 .face-title {
@@ -46,9 +54,10 @@
 .action-button-icon {
   user-select: none;
   position: relative;
-  color: #fff;
-  top: 2px;
-  font-size: 26px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .face-title.active {
