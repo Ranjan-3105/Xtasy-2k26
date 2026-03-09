@@ -188,6 +188,7 @@ const items = [
 
 export const EventsPage = () => {
   const [scale, setScale] = useState(1);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [selectedEvent, setSelectedEvent] = useState<any>(null);
 
   useEffect(() => {

@@ -5,7 +5,7 @@ import Tlogo from '../assets/XTASY_TRANSPARENT_RED.png'
 import starSkull from '../assets/starSkull.png';
 import heroVideo from '../assets/Colored BackdropH.264.mp4';
 import { Countdown } from './Countdown';
-  
+
 export const Hero = () => {
   const ref = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -45,15 +45,15 @@ export const Hero = () => {
   return (
     <motion.section
       ref={ref}
-      style={{ scale, opacity }}
+      style={{ scale, opacity, position: 'relative' }}
       className="h-screen flex items-center justify-center relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-black">
-        <video 
+        <video
           ref={videoRef}
-          autoPlay 
-          loop 
-          muted 
+          autoPlay
+          loop
+          muted
           playsInline
           webkit-playsinline="true"
           preload="metadata"
@@ -92,7 +92,8 @@ export const Hero = () => {
           <motion.img
             src={Tlogo}
             alt="Xtasy Logo"
-            fetchPriority="high"
+            // @ts-ignore
+            fetchpriority="high"
             className="w-32 h-auto md:w-56 lg:w-64 mb-7 object-contain"
             initial={{ scale: 0 }}
             animate={{ scale: 1.5 }}
@@ -129,7 +130,7 @@ export const Hero = () => {
       </a>
 
       {/* Video Play/Pause Toggle */}
-      <button 
+      <button
         onClick={toggleVideo}
         className="absolute bottom-12 left-6 md:left-12 z-50 bg-black/50 hover:bg-black/80 backdrop-blur-sm border border-white/20 p-3 rounded-full text-white transition-all duration-300 pointer-events-auto shadow-[0_0_15px_rgba(0,0,0,0.5)]"
         aria-label={isPlaying ? "Pause background video" : "Play background video"}
@@ -138,9 +139,9 @@ export const Hero = () => {
       </button>
 
       <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-transparent via-transparent to-black opacity-30 pointer-events-none"
-           style={{
-             clipPath: 'polygon(0 0, 100% 0, 100% 20%, 95% 25%, 90% 20%, 85% 25%, 80% 20%, 75% 25%, 70% 20%, 65% 25%, 60% 20%, 55% 25%, 50% 20%, 45% 25%, 40% 20%, 35% 25%, 30% 20%, 25% 25%, 20% 20%, 15% 25%, 10% 20%, 5% 25%, 0 20%)'
-           }}
+        style={{
+          clipPath: 'polygon(0 0, 100% 0, 100% 20%, 95% 25%, 90% 20%, 85% 25%, 80% 20%, 75% 25%, 70% 20%, 65% 25%, 60% 20%, 55% 25%, 50% 20%, 45% 25%, 40% 20%, 35% 25%, 30% 20%, 25% 25%, 20% 20%, 15% 25%, 10% 20%, 5% 25%, 0 20%)'
+        }}
       />
     </motion.section>
   );

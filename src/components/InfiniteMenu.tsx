@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useRef, useState } from 'react';
 import { mat4, quat, vec2, vec3 } from 'gl-matrix';
 import { ArrowUpRight } from 'lucide-react';
@@ -360,7 +361,7 @@ class ArcballControl {
   snapTargetDirection: vec3 | null = null;
   EPSILON = 0.1;
   IDENTITY_QUAT = quat.create();
-  
+
   canvas: HTMLCanvasElement;
   updateCallback: (deltaTime: number) => void;
   pointerPos: vec2;
@@ -400,7 +401,7 @@ class ArcballControl {
   update(deltaTime: number, targetFrameDuration = 16) {
     const timeScale = deltaTime / targetFrameDuration + 0.00001;
     let angleFactor = timeScale;
-    let snapRotation = quat.create();
+    const snapRotation = quat.create();
 
     if (this.isPointerDown) {
       const INTENSITY = 0.3 * timeScale;
@@ -503,7 +504,7 @@ class InfiniteGridMenu {
   deltaTime = 0;
   deltaFrames = 0;
   frames = 0;
-  
+
   gl: WebGL2RenderingContext | null = null;
   viewportSize: vec2 | null = null;
   drawBufferSize: vec2 | null = null;
@@ -540,7 +541,7 @@ class InfiniteGridMenu {
   smoothRotationVelocity = 0;
   scaleFactor = 1.0;
   movementActive = false;
-  
+
   canvas: HTMLCanvasElement;
   items: any[];
   onActiveItemChange: (index: number) => void;
@@ -549,8 +550,8 @@ class InfiniteGridMenu {
   constructor(canvas: HTMLCanvasElement, items: any[], onActiveItemChange: (index: number) => void, onMovementChange: (moving: boolean) => void, onInit: ((sk: InfiniteGridMenu) => void) | null = null, scale = 1.0) {
     this.canvas = canvas;
     this.items = items || [];
-    this.onActiveItemChange = onActiveItemChange || (() => {});
-    this.onMovementChange = onMovementChange || (() => {});
+    this.onActiveItemChange = onActiveItemChange || (() => { });
+    this.onMovementChange = onMovementChange || (() => { });
     this.scaleFactor = scale;
     this.camera.position[2] = 3 * scale;
     this.init(onInit);
@@ -561,7 +562,7 @@ class InfiniteGridMenu {
 
     const gl = this.gl;
     if (!gl) return;
-    
+
     const needsResize = resizeCanvasToDisplaySize(gl.canvas as HTMLCanvasElement);
     if (needsResize) {
       gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
@@ -718,7 +719,7 @@ class InfiniteGridMenu {
     if (!this.control) return;
     this.control.update(deltaTime, this.TARGET_FRAME_DURATION);
 
-    let positions = this.instancePositions.map((p: any) => vec3.transformQuat(vec3.create(), p, this.control!.orientation));
+    const positions = this.instancePositions.map((p: any) => vec3.transformQuat(vec3.create(), p, this.control!.orientation));
     const scale = 0.25;
     const SCALE_INTENSITY = 0.6;
     positions.forEach((p: any, ndx: number) => {
@@ -930,8 +931,6 @@ export default function InfiniteMenu({ items = [], scale = 1.0, onActionClick }:
     if (!activeItem?.link) return;
     if (activeItem.link.startsWith('http')) {
       window.open(activeItem.link, '_blank');
-    } else {
-
     }
   };
 

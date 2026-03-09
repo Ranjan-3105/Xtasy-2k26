@@ -15,6 +15,7 @@ const Gallery = lazy(() => import('./components/Gallery').then(module => ({ defa
 // const GuessTheStar = lazy(() => import('./components/GuessTheStar').then(module => ({ default: module.GuessTheStar })));
 // const Schedule = lazy(() => import('./components/Schedule').then(module => ({ default: module.Schedule })));
 const Register = lazy(() => import('./components/Register').then(module => ({ default: module.Register })));
+const MerchBand = lazy(() => import('./components/MerchBand').then(module => ({ default: module.MerchBand })));
 import { TornEdge } from './components/TornEdge';
 
 // Lazy load secondary pages
@@ -23,13 +24,25 @@ const AboutPage = lazy(() => import('./components/AboutPage').then(module => ({ 
 const SponsorsPage = lazy(() => import('./components/SponsorsPage').then(module => ({ default: module.SponsorsPage })));
 const MerchPage = lazy(() => import('./components/MerchPage').then(module => ({ default: module.MerchPage })));
 
+console.log(`
+  ██╗  ██╗ ██████╗ ██╗  ██╗        ███████╗ ██████╗ ██╗   ██╗███╗   ██╗██████╗ 
+  ██║  ██║██╔═══██╗██║  ██║        ██╔════╝██╔═══██╗██║   ██║████╗  ██║██╔══██╗
+  ███████║██║   ██║███████║        █████╗  ██║   ██║██║   ██║██╔██╗ ██║██║  ██║
+  ╚════██║██║   ██║╚════██║        ██╔══╝  ██║   ██║██║   ██║██║╚██╗██║██║  ██║
+       ██║╚██████╔╝     ██║        ██║     ╚██████╔╝╚██████╔╝██║ ╚████║██████╔╝
+       ╚═╝ ╚═════╝      ╚═╝        ╚═╝      ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝╚═════╝
+       \n
+                        [ fsociety ]
+                         \n
+                         by ~SRN
+  `)
 function HomePage() {
   return (
-    <div className="bg-black min-h-screen selection:bg-hot-pink selection:text-white">
+    <div className="relative bg-black min-h-screen selection:bg-hot-pink selection:text-white" style={{ position: 'relative' }}>
       <Navbar />
       <ScrollProgress />
 
-      <main className="relative">
+      <main className="relative" style={{ position: 'relative' }}>
         <Hero />
         <Suspense fallback={<div className="min-h-screen bg-black" />}>
           <div id="about"><About /></div>
@@ -37,13 +50,14 @@ function HomePage() {
           {/* <Schedule /> */}
           <div id="gallery"><Gallery /></div>
           {/* <GuessTheStar /> */}
+          <div id="merch-band"><MerchBand /></div>
           <Register />
         </Suspense>
-        
+
         {/* Adds the punk/grunge torn paper edge before the footer */}
         <TornEdge />
       </main>
-      
+
       {/* Footer */}
       <footer className="bg-black py-12 border-t border-white/10 relative z-10">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
@@ -73,10 +87,10 @@ function HomePage() {
             <div className="flex flex-col items-center md:items-start">
               <h3 className="font-heading text-3xl text-neon-yellow mb-6">FOLLOW US</h3>
               <div className="flex gap-4">
-                <a 
-                  href="https://www.instagram.com/xtasyoutr/?hl=en" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href="https://www.instagram.com/xtasyoutr/?hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-hot-pink transition-all duration-300"
                   aria-label="Instagram"
                 >
@@ -98,19 +112,19 @@ function HomePage() {
           </div>
 
           <div className="border-t border-white pt-8 text-center">
-  <p className="text-white text-sm tracking-wide">
-    © 2026 XTASY. Designed & developed by{" "}
-    <a
-      href="https://linkedin.com/in/soumya-ranjan-nanda-849489214"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="underline hover:opacity-80 transition duration-300"
-    >
-      SRN
-    </a>
-    .
-  </p>
-</div>
+            <p className="text-white text-sm tracking-wide">
+              © 2026 XTASY. Designed & developed by{" "}
+              <a
+                href="https://linkedin.com/in/soumya-ranjan-nanda-849489214"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:opacity-80 transition duration-300"
+              >
+                SRN
+              </a>
+              .
+            </p>
+          </div>
         </div>
       </footer>
     </div>
@@ -140,7 +154,7 @@ function App() {
   }, [location]);
 
   return (
-    <>
+    <div className="relative w-full h-full min-h-screen" style={{ position: 'relative' }}>
       <CustomCursor />
       <GrainTexture />
       <LoaderHandler />
@@ -153,7 +167,7 @@ function App() {
           <Route path="/merch" element={<MerchPage />} />
         </Routes>
       </Suspense>
-    </>
+    </div>
   );
 }
 

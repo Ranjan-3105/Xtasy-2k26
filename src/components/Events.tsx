@@ -43,7 +43,7 @@ import overthinkTankImg from '../assets/events/the_overthink_tank.webp';
 interface EventItem {
   title: string;
   subtitle: string;
-  icon: React.ComponentType<any>;
+  icon: React.ElementType;
   color: string;
   image: string | null;
   link: string;

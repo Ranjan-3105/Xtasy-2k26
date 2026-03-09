@@ -3,7 +3,9 @@ import { useGLTF, OrbitControls, Stage } from '@react-three/drei';
 import { Suspense } from 'react';
 import modelUrl from '../assets/merch_model/XTASY_2026_BAKEEEEE.glb';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function Model(props: any) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const { scene } = useGLTF(modelUrl) as any;
 
   return <primitive object={scene} {...props} />;

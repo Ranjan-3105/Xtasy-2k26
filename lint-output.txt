@@ -1,0 +1,41 @@
+﻿
+> vite-react-typescript-starter@0.0.0 lint
+> eslint .
+
+
+D:\projects\polaroid_fest\xtasy-demo\src\components\Countdown.tsx
+  31:6  warning  React Hook useEffect has a missing dependency: 'calculateTimeLeft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+D:\projects\polaroid_fest\xtasy-demo\src\components\Events.tsx
+  46:29  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\projects\polaroid_fest\xtasy-demo\src\components\EventsPage.tsx
+  191:54  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\projects\polaroid_fest\xtasy-demo\src\components\InfiniteMenu.tsx
+  298:73  error  Unexpected any. Specify a different type                 @typescript-eslint/no-explicit-any
+  403:9   error  'snapRotation' is never reassigned. Use 'const' instead  prefer-const
+  511:12  error  Unexpected any. Specify a different type                 @typescript-eslint/no-explicit-any
+  512:16  error  Unexpected any. Specify a different type                 @typescript-eslint/no-explicit-any
+  513:12  error  Unexpected any. Specify a different type                 @typescript-eslint/no-explicit-any
+  514:18  error  Unexpected any. Specify a different type                 @typescript-eslint/no-explicit-any
+  515:11  error  Unexpected any. Specify a different type                 @typescript-eslint/no-explicit-any
+  521:18  error  Unexpected any. Specify a different type                 @typescript-eslint/no-explicit-any
+  545:10  error  Unexpected any. Specify a different type                 @typescript-eslint/no-explicit-any
+  549:49  error  Unexpected any. Specify a different type                 @typescript-eslint/no-explicit-any
+  631:59  error  Unexpected any. Specify a different type                 @typescript-eslint/no-explicit-any
+  721:9   error  'positions' is never reassigned. Use 'const' instead     prefer-const
+  721:52  error  Unexpected any. Specify a different type                 @typescript-eslint/no-explicit-any
+  724:27  error  Unexpected any. Specify a different type                 @typescript-eslint/no-explicit-any
+  881:11  error  Unexpected any. Specify a different type                 @typescript-eslint/no-explicit-any
+  883:26  error  Unexpected any. Specify a different type                 @typescript-eslint/no-explicit-any
+  888:48  error  Unexpected any. Specify a different type                 @typescript-eslint/no-explicit-any
+  933:12  error  Empty block statement                                    no-empty
+
+D:\projects\polaroid_fest\xtasy-demo\src\components\MerchModel.tsx
+  6:23  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  7:42  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+Γ£û 23 problems (22 errors, 1 warning)
+  2 errors and 0 warnings potentially fixable with the `--fix` option.
+
