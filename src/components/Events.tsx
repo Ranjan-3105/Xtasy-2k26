@@ -15,7 +15,6 @@ import {
   Camera,
   Pen,
 } from 'lucide-react';
-import eye from '../assets/eye.png';
 import guitar from '../assets/guitarElem1.png';
 
 // Import event images
@@ -132,16 +131,6 @@ export const Events = () => {
             className="w-full h-full object-contain mix-blend-screen"
             animate={{ y: [0, 30, 0], x: [0, 15, 0] }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          />
-        </div>
-        <div className="hidden md:block absolute bottom-20 md:bottom-40 left-2 md:left-5 w-24 h-24 md:w-40 md:h-40 opacity-20 pointer-events-none z-0">
-          <motion.img
-            src={eye}
-            alt=""
-            loading="lazy"
-            className="w-full h-full object-contain"
-            animate={{ rotate: [-10, 10, -10], scale: [1, 1.1, 1] }}
-            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
           />
         </div>
 
